@@ -2,13 +2,13 @@
   import CInput from "./components/CInput.svelte";
   import Chip from "./components/Chip.svelte"
   import FoodCard from "./components/FoodCard.svelte"
-  import { ingridients } from "./store"
+  import { customIngridients } from "./store"
 
   let fetchedRecipes = [];
 
 
   const getRecipes = async () => {
-    let searchIng = Array.prototype.map.call($ingridients, function(item) { return item.name; }).join(",");
+    let searchIng = Array.prototype.map.call($customIngridients, function(item) { return item.name; }).join(",");
     var proxyUrl = "https://cors-anywhere.herokuapp.com/",
       url = `http://www.recipepuppy.com/api/?i=${searchIng}&p=2`;
 
@@ -24,14 +24,14 @@
 
 <main>
   <section>
-    <CInput />
+    <div style="max-width: 280px;">
+      <CInput />
+    </div>
     <button on:click="{getRecipes}">>Fetcxh</button>
   </section>
-  <section>
-    {#each fetchedRecipes as {title, thumbnail, href}}
-<div>{title}</div>
-<FoodCard title={title} thumbnail={thumbnail} href={href} />
-
+  <section id="recipes">
+{#each fetchedRecipes as {title, thumbnail, href}}
+  <FoodCard title={title} thumbnail={thumbnail} href={href} />
 {/each}
   </section>
 </main>
@@ -39,8 +39,6 @@
 <style>
   main {
     text-align: center;
-    padding: 1em;
-    max-width: 240px;
     margin: 0 auto;
     display: grid;
     grid-template-columns: 40% 60%;
@@ -53,9 +51,13 @@
     font-weight: 100;
   }
 
-  @media (min-width: 640px) {
-    main {
-      max-width: none;
-    }
-  }
+#recipes {
+  display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-gap: 10px;
+    grid-auto-rows: auto;
+    padding: 20px;
+    overflow-y: scroll;
+    height: calc(100vh - 40px);
+}
 </style>

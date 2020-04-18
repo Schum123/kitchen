@@ -1,5 +1,13 @@
 import { writable } from "svelte/store";
+import uuid from "uuid/v4";
 
-let ingridients = writable([]);
-
-export { ingridients };
+const ingridients_ = writable([]);
+const customIngridients = {
+  subscribe: ingridients_.subscribe,
+  addTodo: (name) =>
+    ingridients_.update((todos) => [...todos, { name, id: uuid() }]),
+  deleteTodo: (id) =>
+    ingridients_.update((todos) => todos.filter((todo) => todo.id !== id)),
+};
+console.log(customIngridients);
+export { customIngridients };

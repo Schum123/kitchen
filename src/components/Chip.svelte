@@ -1,17 +1,14 @@
 <script>
-  import { createEventDispatcher } from "svelte";
+  import { customIngridients } from "../store";
   export let id;
   export let name;
-  const dispatch = createEventDispatcher();
-  function deleteIngredient() {
-    dispatch("deleteIngredient", {
-      id: id,
-    });
-  }
+  const remove = (id) => {
+    customIngridients.deleteTodo(id);
+  };
 </script>
 <div class="todo-item">
   <div>{name}</div>
-  <div class="remove-item" on:click="{deleteIngredient}">
+  <div class="remove-item" on:click="{()=>remove(id)}">
     x
   </div>
 </div>
