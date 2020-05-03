@@ -83,7 +83,8 @@
     input.blur();
     if (index > -1) {
       value = results[index].value.name;
-      customIngridients.addTodo(value);
+      let ingredientId = results[index].value.ingredientId;
+      customIngridients.addTodo(value, ingredientId);
       search = "";
     } else if (!value) {
       //search = "";

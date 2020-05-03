@@ -1,0 +1,73 @@
+// // URL EXAMPLE https://www.arla.se/webappsfoodclub/demo/foodclubrecipes/byingredients/2092030536_186612795/2369290276_3385323261,4139464278_2363475137?categoryid=865150284&skip=0&take=20
+
+[
+  {
+    "Id": 2642194214,
+    "Name": "Mackor med chili och kyckling",
+    "Url": "https://www.arla.se/recept/mackor-med-chili-och-kyckling/",
+    "ImageUrl": "https://cdn-rdb.arla.com/Files/arla-se/2642194214/17053924-8cdd-44bc-9033-1d01e566c523.jpg",
+    "Favorite": false,
+    "Pinned": false,
+    "CookingTime": null,
+    "MealType": "Huvudrätt",
+    "HasMainIngredient": true,
+    "Ingredients": [
+      {
+        "Id": 813568481,
+        "Name": "grillad kyckling",
+        "Amount": "½",
+        "Selected": true,
+        "IsArlaProduct": false
+      },
+      {
+        "Id": 1059549562,
+        "Name": "pitabröd",
+        "Amount": "4",
+        "Selected": false,
+        "IsArlaProduct": false
+      },
+      {
+        "Id": 4139464278,
+        "Name": "bacon",
+        "Amount": "4 skivor",
+        "Selected": true,
+        "IsArlaProduct": false
+      },
+      {
+        "Id": 2419639979,
+        "Name": "Arla Köket matyoghurt",
+        "Amount": "1 dl",
+        "Selected": false,
+        "IsArlaProduct": true
+      },
+      {
+        "Id": 317388171,
+        "Name": "vit böna",
+        "Amount": "400 g",
+        "Selected": false,
+        "IsArlaProduct": false
+      },
+      {
+        "Id": 884363637,
+        "Name": "vitlöksklyfta",
+        "Amount": "1",
+        "Selected": true,
+        "IsArlaProduct": false
+      },
+      {
+        "Id": 3136349805,
+        "Name": "sambal oelek",
+        "Amount": "½ tsk",
+        "Selected": false,
+        "IsArlaProduct": false
+      },
+      {
+        "Id": 3623708641,
+        "Name": "salt",
+        "Amount": "1 krm",
+        "Selected": false,
+        "IsArlaProduct": false
+      }
+    ]
+  }
+]
