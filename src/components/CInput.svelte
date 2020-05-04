@@ -4,12 +4,9 @@
   import Chip from "./Chip.svelte";
   import Autocomplete from "./Autocomplete.svelte"
   import * as ingredientsList from '../../ingridients.json';
-
   import EmptyFridgeData from '../../testt.js'
 
   const arrayOfObj = Object.entries(EmptyFridgeData.Ingredients).map((e) => ( { 'ingredientId': e[0], 'name': e[1] } ));
-
-  // console.log(arrayOfObj)
 </script>
 
 <Autocomplete class="input" name="fruits"  items="{arrayOfObj}" minChar="2"/>

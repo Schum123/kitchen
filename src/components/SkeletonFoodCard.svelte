@@ -56,7 +56,7 @@
     box-shadow: 0 2px 4px var(--shadow);
     border: 1px solid var(--border);
     border-radius: 8px;
-    max-height: 230px;
+    min-height: 230px;
   }
   .animated-background {
     will-change: transform;

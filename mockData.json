@@ -1,2 +1,1193 @@
-
-[{"title":"Cassis Champagne Cocktail","href":"http:\/\/www.recipezaar.com\/Cassis-Chagne-Cocktail-233047","ingredients":"champagne, sugar","thumbnail":"http:\/\/img.recipepuppy.com\/38115.jpg"},{"title":"Black Shadow","href":"http:\/\/www.recipezaar.com\/Black-Shadow-258256","ingredients":"blue curacao, champagne","thumbnail":"http:\/\/img.recipepuppy.com\/174090.jpg"},{"title":"Deluxe Kir Royal","href":"http:\/\/www.recipezaar.com\/Deluxe-Kir-Royal-172079","ingredients":"champagne, blackberries","thumbnail":"http:\/\/img.recipepuppy.com\/359885.jpg"},{"title":"Green Dragon Recipe","href":"http:\/\/www.grouprecipes.com\/38724\/green-dragon.html","ingredients":"champagne, melon liqueur","thumbnail":"http:\/\/img.recipepuppy.com\/264063.jpg"},{"title":"Peach Granita Granita Di Pesca Recipe","href":"http:\/\/www.grouprecipes.com\/27865\/peach-granita-granita-di-pesca.html","ingredients":"champagne, peach schnapps","thumbnail":"http:\/\/img.recipepuppy.com\/302091.jpg"},{"title":"Flirtini Martini Recipe","href":"http:\/\/www.grouprecipes.com\/73071\/flirtini-martini.html","ingredients":"orange, champagne","thumbnail":"http:\/\/img.recipepuppy.com\/373540.jpg"},{"title":"Bellini Cocktail Recipe","href":"http:\/\/www.grouprecipes.com\/64490\/bellini-cocktail.html","ingredients":"champagne, peach juice","thumbnail":"http:\/\/img.recipepuppy.com\/385141.jpg"},{"title":"Champoo Recipe","href":"http:\/\/www.grouprecipes.com\/57606\/champoo.html","ingredients":"lemon juice, champagne","thumbnail":"http:\/\/img.recipepuppy.com\/388515.jpg"},{"title":"Pink Raspberry Sherbet Champagne Floats Recipe","href":"http:\/\/www.grouprecipes.com\/49838\/pink-raspberry-sherbet-champagne-floats.html","ingredients":"champagne, raspberries","thumbnail":"http:\/\/img.recipepuppy.com\/409534.jpg"},{"title":"Blackberry Kir Royale","href":"http:\/\/www.chow.com\/recipes\/12037","ingredients":"blackberries, champagne, blackberries","thumbnail":"http:\/\/img.recipepuppy.com\/503299.jpg"}]
+[
+  {
+    "Id": 711283736,
+    "Name": "Thaisoppa med räkor",
+    "Url": "https://www.arla.se/recept/thaisoppa-med-rakor/",
+    "ImageUrl": "https://cdn-rdb.arla.com/Files/arla-se/711283736/0362416f-8ade-43d7-b9f3-c21c25352627.jpg",
+    "Favorite": false,
+    "Pinned": false,
+    "CookingTime": null,
+    "MealType": "Huvudrätt",
+    "HasMainIngredient": true,
+    "Ingredients": [
+      {
+        "Id": 1003794429,
+        "Name": "Kelda Thaisoppa",
+        "Amount": "5 dl",
+        "Selected": false,
+        "IsArlaProduct": true
+      },
+      {
+        "Id": 1722222485,
+        "Name": "röd paprika",
+        "Amount": "½",
+        "Selected": true,
+        "IsArlaProduct": false
+      },
+      {
+        "Id": 1105571790,
+        "Name": "salladskål",
+        "Amount": "2 dl",
+        "Selected": false,
+        "IsArlaProduct": false
+      },
+      {
+        "Id": 2922350526,
+        "Name": "skalade räkor",
+        "Amount": "100 g",
+        "Selected": false,
+        "IsArlaProduct": false
+      }
+    ]
+  },
+  {
+    "Id": 1814372915,
+    "Name": "Pasta med paprika- och vitlökssås",
+    "Url": "https://www.arla.se/recept/pasta-med-paprika--och-vitlokssas/",
+    "ImageUrl": "https://cdn-rdb.arla.com/Files/arla-se/1814372915/06aaae8a-3766-47c5-9f54-f17832ce2a01.jpg",
+    "Favorite": false,
+    "Pinned": false,
+    "CookingTime": null,
+    "MealType": "Huvudrätt",
+    "HasMainIngredient": true,
+    "Ingredients": [
+      {
+        "Id": 3297169556,
+        "Name": "pasta",
+        "Amount": "150 g",
+        "Selected": false,
+        "IsArlaProduct": false
+      },
+      {
+        "Id": 1722222485,
+        "Name": "röd paprika",
+        "Amount": "1",
+        "Selected": true,
+        "IsArlaProduct": false
+      },
+      {
+        "Id": 884363637,
+        "Name": "vitlöksklyfta",
+        "Amount": "1",
+        "Selected": false,
+        "IsArlaProduct": false
+      },
+      {
+        "Id": 1666481223,
+        "Name": "Arla Svenskt Smör",
+        "Amount": "1 msk",
+        "Selected": false,
+        "IsArlaProduct": true
+      },
+      {
+        "Id": 2953012803,
+        "Name": "Kelda pastasås mild ost",
+        "Amount": "2 dl",
+        "Selected": false,
+        "IsArlaProduct": true
+      }
+    ]
+  },
+  {
+    "Id": 9121617,
+    "Name": "Spansk räkgryta",
+    "Url": "https://www.arla.se/recept/spansk-rakgryta/",
+    "ImageUrl": "https://cdn-rdb.arla.com/Files/arla-se/9121617/d5a3fada-764c-42bc-b724-5572408ef296.jpg",
+    "Favorite": false,
+    "Pinned": false,
+    "CookingTime": null,
+    "MealType": "Huvudrätt",
+    "HasMainIngredient": true,
+    "Ingredients": [
+      {
+        "Id": 1333274795,
+        "Name": "räka med skal",
+        "Amount": "500 g",
+        "Selected": false,
+        "IsArlaProduct": false
+      },
+      {
+        "Id": 1722222485,
+        "Name": "röd paprika",
+        "Amount": "1",
+        "Selected": true,
+        "IsArlaProduct": false
+      },
+      {
+        "Id": 884363637,
+        "Name": "vitlöksklyfta",
+        "Amount": "2",
+        "Selected": false,
+        "IsArlaProduct": false
+      },
+      {
+        "Id": 1208238308,
+        "Name": "Arla Köket lätt crème fraiche paprika \u0026 chili",
+        "Amount": "2 dl",
+        "Selected": false,
+        "IsArlaProduct": true
+      },
+      {
+        "Id": 152308189,
+        "Name": "sockerärta",
+        "Amount": "200 g",
+        "Selected": false,
+        "IsArlaProduct": false
+      }
+    ]
+  },
+  {
+    "Id": 3418899373,
+    "Name": "Tortellini med ädelostsmör",
+    "Url": "https://www.arla.se/recept/tortellini-med-adelostsmor/",
+    "ImageUrl": "https://cdn-rdb.arla.com/Files/arla-se/3418899373/a7878eaf-1c6b-4135-9778-02d66666e6e0.jpg",
+    "Favorite": false,
+    "Pinned": false,
+    "CookingTime": null,
+    "MealType": "Huvudrätt",
+    "HasMainIngredient": true,
+    "Ingredients": [
+      {
+        "Id": 2927327405,
+        "Name": "Kvibille ädel",
+        "Amount": "150 g",
+        "Selected": false,
+        "IsArlaProduct": true
+      },
+      {
+        "Id": 1666481223,
+        "Name": "Arla Svenskt Smör",
+        "Amount": "75 g",
+        "Selected": false,
+        "IsArlaProduct": true
+      },
+      {
+        "Id": 1649789243,
+        "Name": "chilipulver",
+        "Amount": "½ tsk",
+        "Selected": false,
+        "IsArlaProduct": false
+      },
+      {
+        "Id": 1901344100,
+        "Name": "tortellini",
+        "Amount": "250 g",
+        "Selected": false,
+        "IsArlaProduct": false
+      },
+      {
+        "Id": 1722222485,
+        "Name": "röd paprika",
+        "Amount": "2",
+        "Selected": true,
+        "IsArlaProduct": false
+      },
+      {
+        "Id": 110957159,
+        "Name": "körsbärstomat",
+        "Amount": "250 g",
+        "Selected": false,
+        "IsArlaProduct": false
+      }
+    ]
+  },
+  {
+    "Id": 3626567194,
+    "Name": "Pastasås med kyckling och fetaostkräm",
+    "Url": "https://www.arla.se/recept/pastasas-med-kyckling-och-fetaostkram/",
+    "ImageUrl": "https://cdn-rdb.arla.com/Files/arla-se/3626567194/8dd826e6-12c1-4e42-a45a-425e856a8b85.jpg",
+    "Favorite": false,
+    "Pinned": false,
+    "CookingTime": "30 min",
+    "MealType": "Huvudrätt",
+    "HasMainIngredient": true,
+    "Ingredients": [
+      {
+        "Id": 813568481,
+        "Name": "grillad kyckling",
+        "Amount": "½",
+        "Selected": false,
+        "IsArlaProduct": false
+      },
+      {
+        "Id": 1722222485,
+        "Name": "röd paprika",
+        "Amount": "1",
+        "Selected": true,
+        "IsArlaProduct": false
+      },
+      {
+        "Id": 3829815457,
+        "Name": "rödlök",
+        "Amount": "1",
+        "Selected": false,
+        "IsArlaProduct": false
+      },
+      {
+        "Id": 3241537136,
+        "Name": "Arla Köket Smör-\u0026rapsolja",
+        "Amount": "1 msk",
+        "Selected": false,
+        "IsArlaProduct": true
+      },
+      {
+        "Id": 3897887781,
+        "Name": "majskorn",
+        "Amount": "2 dl",
+        "Selected": false,
+        "IsArlaProduct": false
+      },
+      {
+        "Id": 1487743753,
+        "Name": "Arla Köket crème fraiche fetaost \u0026 soltorkade tomater",
+        "Amount": "2 dl",
+        "Selected": false,
+        "IsArlaProduct": true
+      }
+    ]
+  },
+  {
+    "Id": 3243985971,
+    "Name": "Vegetariska wraps med hummus",
+    "Url": "https://www.arla.se/recept/vegetariska-wraps-med-hummus/",
+    "ImageUrl": "https://cdn-rdb.arla.com/Files/arla-se/3243985971/f9fd223a-e9fc-48f2-978e-ab668b29bdcd.jpg",
+    "Favorite": false,
+    "Pinned": false,
+    "CookingTime": null,
+    "MealType": "Huvudrätt",
+    "HasMainIngredient": true,
+    "Ingredients": [
+      {
+        "Id": 496668626,
+        "Name": "kikärta",
+        "Amount": "400 g",
+        "Selected": false,
+        "IsArlaProduct": false
+      },
+      {
+        "Id": 1208238308,
+        "Name": "Arla Köket lätt crème fraiche paprika \u0026 chili",
+        "Amount": "2 dl",
+        "Selected": false,
+        "IsArlaProduct": true
+      },
+      {
+        "Id": 3623708641,
+        "Name": "salt",
+        "Amount": "1 krm",
+        "Selected": false,
+        "IsArlaProduct": false
+      },
+      {
+        "Id": 1722222485,
+        "Name": "röd paprika",
+        "Amount": "1",
+        "Selected": true,
+        "IsArlaProduct": false
+      },
+      {
+        "Id": 1249932770,
+        "Name": "tortillabröd",
+        "Amount": "4",
+        "Selected": false,
+        "IsArlaProduct": false
+      },
+      {
+        "Id": 2741211660,
+        "Name": "sallad",
+        "Amount": "4 dl",
+        "Selected": false,
+        "IsArlaProduct": false
+      }
+    ]
+  },
+  {
+    "Id": 2812757793,
+    "Name": "Blomkål i grädde med pesto",
+    "Url": "https://www.arla.se/recept/blomkal-i-gradde-med-pesto/",
+    "ImageUrl": "https://cdn-rdb.arla.com/Files/arla-se/2812757793/49ed16bd-71af-46f6-9453-97dca5d2fef7.jpg",
+    "Favorite": false,
+    "Pinned": false,
+    "CookingTime": null,
+    "MealType": "Huvudrätt",
+    "HasMainIngredient": true,
+    "Ingredients": [
+      {
+        "Id": 1046371796,
+        "Name": "blomkål",
+        "Amount": "600 g",
+        "Selected": false,
+        "IsArlaProduct": false
+      },
+      {
+        "Id": 1722222485,
+        "Name": "röd paprika",
+        "Amount": "1",
+        "Selected": true,
+        "IsArlaProduct": false
+      },
+      {
+        "Id": 1666481223,
+        "Name": "Arla Svenskt Smör",
+        "Amount": "",
+        "Selected": false,
+        "IsArlaProduct": true
+      },
+      {
+        "Id": 1581518990,
+        "Name": "Kelda mellangrädde",
+        "Amount": "2½ dl",
+        "Selected": false,
+        "IsArlaProduct": true
+      },
+      {
+        "Id": 2625055607,
+        "Name": "pesto",
+        "Amount": "½ dl",
+        "Selected": false,
+        "IsArlaProduct": false
+      },
+      {
+        "Id": 3623708641,
+        "Name": "salt",
+        "Amount": "½ tsk",
+        "Selected": false,
+        "IsArlaProduct": false
+      },
+      {
+        "Id": 2224340744,
+        "Name": "matvete",
+        "Amount": "3 dl",
+        "Selected": false,
+        "IsArlaProduct": false
+      }
+    ]
+  },
+  {
+    "Id": 957854432,
+    "Name": "Svamp- och falukorvspanna",
+    "Url": "https://www.arla.se/recept/svamp--och-falukorvspanna/",
+    "ImageUrl": "https://cdn-rdb.arla.com/Files/arla-se/957854432/95d33d74-bf5c-4f9d-a922-abf43fa0b149.jpg",
+    "Favorite": false,
+    "Pinned": false,
+    "CookingTime": "20 min",
+    "MealType": "Huvudrätt",
+    "HasMainIngredient": true,
+    "Ingredients": [
+      {
+        "Id": 4236528846,
+        "Name": "falukorv",
+        "Amount": "400 g",
+        "Selected": false,
+        "IsArlaProduct": false
+      },
+      {
+        "Id": 1666481223,
+        "Name": "Arla Svenskt Smör",
+        "Amount": "",
+        "Selected": false,
+        "IsArlaProduct": true
+      },
+      {
+        "Id": 2630315837,
+        "Name": "Kelda matlagningsgrädde",
+        "Amount": "2 dl",
+        "Selected": false,
+        "IsArlaProduct": true
+      },
+      {
+        "Id": 567897289,
+        "Name": "svampfond",
+        "Amount": "¾ msk",
+        "Selected": false,
+        "IsArlaProduct": false
+      },
+      {
+        "Id": 3244913342,
+        "Name": "majsstärkelse",
+        "Amount": "½ msk",
+        "Selected": false,
+        "IsArlaProduct": false
+      },
+      {
+        "Id": 1722222485,
+        "Name": "röd paprika",
+        "Amount": "1",
+        "Selected": true,
+        "IsArlaProduct": false
+      },
+      {
+        "Id": 957689371,
+        "Name": "pastahjul",
+        "Amount": "300 g",
+        "Selected": false,
+        "IsArlaProduct": false
+      }
+    ]
+  },
+  {
+    "Id": 2435798856,
+    "Name": "Tonfiskspaghetti",
+    "Url": "https://www.arla.se/recept/tonfiskspaghetti/",
+    "ImageUrl": "https://cdn-rdb.arla.com/Files/arla-se/2435798856/2f77ec8d-ae7a-482f-932f-73e7653ec7ac.jpg",
+    "Favorite": false,
+    "Pinned": false,
+    "CookingTime": null,
+    "MealType": "Huvudrätt",
+    "HasMainIngredient": true,
+    "Ingredients": [
+      {
+        "Id": 848882720,
+        "Name": "spaghetti",
+        "Amount": "300 g",
+        "Selected": false,
+        "IsArlaProduct": false
+      },
+      {
+        "Id": 1722222485,
+        "Name": "röd paprika",
+        "Amount": "2",
+        "Selected": true,
+        "IsArlaProduct": false
+      },
+      {
+        "Id": 1687314181,
+        "Name": "purjolök",
+        "Amount": "1",
+        "Selected": false,
+        "IsArlaProduct": false
+      },
+      {
+        "Id": 3556856496,
+        "Name": "tonfisk i olja",
+        "Amount": "185 g",
+        "Selected": false,
+        "IsArlaProduct": false
+      },
+      {
+        "Id": 1666481223,
+        "Name": "Arla Svenskt Smör",
+        "Amount": "",
+        "Selected": false,
+        "IsArlaProduct": true
+      },
+      {
+        "Id": 2777752894,
+        "Name": "Arla Köket lätt crème fraiche",
+        "Amount": "2 dl",
+        "Selected": false,
+        "IsArlaProduct": true
+      },
+      {
+        "Id": 4188121382,
+        "Name": "kapris",
+        "Amount": "½ dl",
+        "Selected": false,
+        "IsArlaProduct": false
+      }
+    ]
+  },
+  {
+    "Id": 2439043826,
+    "Name": "Tunnbrödswraps",
+    "Url": "https://www.arla.se/recept/tunnbrodwraps/",
+    "ImageUrl": "https://cdn-rdb.arla.com/Files/arla-se/2439043826/ae982702-de57-4ef6-aaeb-6a8338a12e5b.jpg",
+    "Favorite": false,
+    "Pinned": false,
+    "CookingTime": null,
+    "MealType": "Huvudrätt",
+    "HasMainIngredient": true,
+    "Ingredients": [
+      {
+        "Id": 835230294,
+        "Name": "tunnbröd",
+        "Amount": "4",
+        "Selected": false,
+        "IsArlaProduct": false
+      },
+      {
+        "Id": 3218950546,
+        "Name": "Apetina grillost",
+        "Amount": "240 g",
+        "Selected": false,
+        "IsArlaProduct": true
+      },
+      {
+        "Id": 3241537136,
+        "Name": "Arla Köket Smör-\u0026rapsolja",
+        "Amount": "",
+        "Selected": false,
+        "IsArlaProduct": true
+      },
+      {
+        "Id": 1516456735,
+        "Name": "zucchini",
+        "Amount": "1",
+        "Selected": false,
+        "IsArlaProduct": false
+      },
+      {
+        "Id": 1722222485,
+        "Name": "röd paprika",
+        "Amount": "1",
+        "Selected": true,
+        "IsArlaProduct": false
+      },
+      {
+        "Id": 3308849037,
+        "Name": "Arla Köket turkisk yoghurt",
+        "Amount": "1 dl",
+        "Selected": false,
+        "IsArlaProduct": true
+      },
+      {
+        "Id": 3917274706,
+        "Name": "torkad mynta",
+        "Amount": "1 tsk",
+        "Selected": false,
+        "IsArlaProduct": false
+      }
+    ]
+  },
+  {
+    "Id": 1719074018,
+    "Name": "Baconlindade grillspett med örter och citron",
+    "Url": "https://www.arla.se/recept/baconlindade-grillspett-med-orter-och-citron/",
+    "ImageUrl": "https://cdn-rdb.arla.com/Files/arla-se/1719074018/55c819ae-4d38-4464-baf3-0e090966d423.jpg",
+    "Favorite": false,
+    "Pinned": false,
+    "CookingTime": null,
+    "MealType": "Buffé, Huvudrätt, Förrätt",
+    "HasMainIngredient": true,
+    "Ingredients": [
+      {
+        "Id": 4139464278,
+        "Name": "bacon",
+        "Amount": "140 g",
+        "Selected": false,
+        "IsArlaProduct": false
+      },
+      {
+        "Id": 421405403,
+        "Name": "halloumi",
+        "Amount": "240 g",
+        "Selected": false,
+        "IsArlaProduct": false
+      },
+      {
+        "Id": 1722222485,
+        "Name": "röd paprika",
+        "Amount": "1",
+        "Selected": true,
+        "IsArlaProduct": false
+      },
+      {
+        "Id": 137781217,
+        "Name": "rapsolja",
+        "Amount": "2 msk",
+        "Selected": false,
+        "IsArlaProduct": false
+      },
+      {
+        "Id": 1535472681,
+        "Name": "citron",
+        "Amount": "½",
+        "Selected": false,
+        "IsArlaProduct": false
+      },
+      {
+        "Id": 822922967,
+        "Name": "svartpeppar",
+        "Amount": "2 krm",
+        "Selected": false,
+        "IsArlaProduct": false
+      },
+      {
+        "Id": 324268816,
+        "Name": "torkad rosmarin",
+        "Amount": "1 tsk",
+        "Selected": false,
+        "IsArlaProduct": false
+      }
+    ]
+  },
+  {
+    "Id": 3150366321,
+    "Name": "Lövbiffspanna",
+    "Url": "https://www.arla.se/recept/lovbiffspanna/",
+    "ImageUrl": "https://cdn-rdb.arla.com/Files/arla-se/3150366321/b9285270-f7f0-4b49-9243-7aebe8fb0ee3.jpg",
+    "Favorite": false,
+    "Pinned": false,
+    "CookingTime": null,
+    "MealType": "Huvudrätt",
+    "HasMainIngredient": true,
+    "Ingredients": [
+      {
+        "Id": 3818236371,
+        "Name": "lövbiff",
+        "Amount": "500 g",
+        "Selected": false,
+        "IsArlaProduct": false
+      },
+      {
+        "Id": 1722222485,
+        "Name": "röd paprika",
+        "Amount": "1",
+        "Selected": true,
+        "IsArlaProduct": false
+      },
+      {
+        "Id": 3241537136,
+        "Name": "Arla Köket Smör-\u0026rapsolja",
+        "Amount": "1 msk",
+        "Selected": false,
+        "IsArlaProduct": true
+      },
+      {
+        "Id": 2630315837,
+        "Name": "Kelda matlagningsgrädde",
+        "Amount": "2 dl",
+        "Selected": false,
+        "IsArlaProduct": true
+      },
+      {
+        "Id": 567897289,
+        "Name": "svampfond",
+        "Amount": "¾ msk",
+        "Selected": false,
+        "IsArlaProduct": false
+      },
+      {
+        "Id": 3244913342,
+        "Name": "majsstärkelse",
+        "Amount": "½ msk",
+        "Selected": false,
+        "IsArlaProduct": false
+      },
+      {
+        "Id": 3919989441,
+        "Name": "färsk gräslök",
+        "Amount": "2 msk",
+        "Selected": false,
+        "IsArlaProduct": false
+      }
+    ]
+  },
+  {
+    "Id": 832482492,
+    "Name": "Pizza med kabanoss och smetana",
+    "Url": "https://www.arla.se/recept/pizza-med-kabanoss-och-smetana/",
+    "ImageUrl": "https://cdn-rdb.arla.com/Files/arla-se/832482492/ed2d22a7-3ddb-4822-aff2-aea5556ba9b5.jpg",
+    "Favorite": false,
+    "Pinned": false,
+    "CookingTime": null,
+    "MealType": "Huvudrätt",
+    "HasMainIngredient": true,
+    "Ingredients": [
+      {
+        "Id": 1797754678,
+        "Name": "pizzadeg",
+        "Amount": "1",
+        "Selected": false,
+        "IsArlaProduct": false
+      },
+      {
+        "Id": 2736563234,
+        "Name": "Arla Köket riven ost pizza",
+        "Amount": "150 g",
+        "Selected": false,
+        "IsArlaProduct": true
+      },
+      {
+        "Id": 3234397277,
+        "Name": "kabanoss",
+        "Amount": "250 g",
+        "Selected": false,
+        "IsArlaProduct": false
+      },
+      {
+        "Id": 1722222485,
+        "Name": "röd paprika",
+        "Amount": "1",
+        "Selected": true,
+        "IsArlaProduct": false
+      },
+      {
+        "Id": 610275915,
+        "Name": "rucola",
+        "Amount": "60 g",
+        "Selected": false,
+        "IsArlaProduct": false
+      },
+      {
+        "Id": 4161738561,
+        "Name": "saltgurka",
+        "Amount": "150 g",
+        "Selected": false,
+        "IsArlaProduct": false
+      },
+      {
+        "Id": 1168225095,
+        "Name": "Arla Köket smetana",
+        "Amount": "2 dl",
+        "Selected": false,
+        "IsArlaProduct": true
+      }
+    ]
+  },
+  {
+    "Id": 517266965,
+    "Name": "Fläskfilé tikka masala",
+    "Url": "https://www.arla.se/recept/flaskfile-tikka-masala/",
+    "ImageUrl": "https://cdn-rdb.arla.com/Files/arla-se/517266965/0efb4457-97e7-403f-93a5-98c5fc68c0f8.jpg",
+    "Favorite": false,
+    "Pinned": false,
+    "CookingTime": "20 min",
+    "MealType": "Huvudrätt",
+    "HasMainIngredient": true,
+    "Ingredients": [
+      {
+        "Id": 2844857066,
+        "Name": "fläskfilé",
+        "Amount": "500 g",
+        "Selected": false,
+        "IsArlaProduct": false
+      },
+      {
+        "Id": 3241537136,
+        "Name": "Arla Köket Smör-\u0026rapsolja",
+        "Amount": "1 msk",
+        "Selected": false,
+        "IsArlaProduct": true
+      },
+      {
+        "Id": 1722222485,
+        "Name": "röd paprika",
+        "Amount": "1",
+        "Selected": true,
+        "IsArlaProduct": false
+      },
+      {
+        "Id": 3977960190,
+        "Name": "tikka masala sås",
+        "Amount": "1 burk",
+        "Selected": false,
+        "IsArlaProduct": false
+      },
+      {
+        "Id": 3212502812,
+        "Name": "jasminris",
+        "Amount": "3 dl",
+        "Selected": false,
+        "IsArlaProduct": false
+      },
+      {
+        "Id": 2419639979,
+        "Name": "Arla Köket matyoghurt",
+        "Amount": "2 dl",
+        "Selected": false,
+        "IsArlaProduct": true
+      },
+      {
+        "Id": 234176372,
+        "Name": "färsk koriander",
+        "Amount": "½ kruka",
+        "Selected": false,
+        "IsArlaProduct": false
+      }
+    ]
+  },
+  {
+    "Id": 1832352422,
+    "Name": "Het gryta med fläskytterfilé",
+    "Url": "https://www.arla.se/recept/het-gryta-med-flaskytterfile/",
+    "ImageUrl": "https://cdn-rdb.arla.com/Files/arla-se/1832352422/9ec98195-46fd-4cbd-bba0-48bfb6b984de.jpg",
+    "Favorite": false,
+    "Pinned": false,
+    "CookingTime": "20 min",
+    "MealType": "Huvudrätt",
+    "HasMainIngredient": true,
+    "Ingredients": [
+      {
+        "Id": 2300252279,
+        "Name": "fläskytterfilé",
+        "Amount": "400 g",
+        "Selected": false,
+        "IsArlaProduct": false
+      },
+      {
+        "Id": 2104596087,
+        "Name": "chorizo",
+        "Amount": "150 g",
+        "Selected": false,
+        "IsArlaProduct": false
+      },
+      {
+        "Id": 1666481223,
+        "Name": "Arla Svenskt Smör",
+        "Amount": "",
+        "Selected": false,
+        "IsArlaProduct": true
+      },
+      {
+        "Id": 3623708641,
+        "Name": "salt",
+        "Amount": "½ tsk",
+        "Selected": false,
+        "IsArlaProduct": false
+      },
+      {
+        "Id": 1722222485,
+        "Name": "röd paprika",
+        "Amount": "1",
+        "Selected": true,
+        "IsArlaProduct": false
+      },
+      {
+        "Id": 1475372872,
+        "Name": "vatten",
+        "Amount": "½ dl",
+        "Selected": false,
+        "IsArlaProduct": false
+      },
+      {
+        "Id": 1208238308,
+        "Name": "Arla Köket lätt crème fraiche paprika \u0026 chili",
+        "Amount": "2 dl",
+        "Selected": false,
+        "IsArlaProduct": true
+      }
+    ]
+  },
+  {
+    "Id": 1033488300,
+    "Name": "Paprikor fyllda med krämig ost",
+    "Url": "https://www.arla.se/recept/paprikor-fyllda-med-kramig-ost/",
+    "ImageUrl": "https://cdn-rdb.arla.com/Files/arla-se/1033488300/18339e63-14db-4c79-9d64-f1bf7f1e5820.jpg",
+    "Favorite": false,
+    "Pinned": false,
+    "CookingTime": null,
+    "MealType": "Buffé, Huvudrätt",
+    "HasMainIngredient": true,
+    "Ingredients": [
+      {
+        "Id": 1722222485,
+        "Name": "röd paprika",
+        "Amount": "5",
+        "Selected": true,
+        "IsArlaProduct": false
+      },
+      {
+        "Id": 2689257052,
+        "Name": "Apetina vitost krämig hel bit ",
+        "Amount": "400 g",
+        "Selected": false,
+        "IsArlaProduct": true
+      },
+      {
+        "Id": 1135079811,
+        "Name": "ägg",
+        "Amount": "2",
+        "Selected": false,
+        "IsArlaProduct": false
+      },
+      {
+        "Id": 1837292100,
+        "Name": "surdegsbröd",
+        "Amount": "4 skivor",
+        "Selected": false,
+        "IsArlaProduct": false
+      },
+      {
+        "Id": 52322906,
+        "Name": "blandad grönsallad",
+        "Amount": "",
+        "Selected": false,
+        "IsArlaProduct": false
+      },
+      {
+        "Id": 4160227771,
+        "Name": "salviablad",
+        "Amount": "½ kruka",
+        "Selected": false,
+        "IsArlaProduct": false
+      },
+      {
+        "Id": 137781217,
+        "Name": "rapsolja",
+        "Amount": "3 dl",
+        "Selected": false,
+        "IsArlaProduct": false
+      }
+    ]
+  },
+  {
+    "Id": 4200799584,
+    "Name": "Paprika- och chilikyckling",
+    "Url": "https://www.arla.se/recept/ingefara--och-chilikyckling/",
+    "ImageUrl": "https://cdn-rdb.arla.com/Files/arla-se/4200799584/a6958cb6-7a94-4877-819a-7ef1179f5c09.jpg",
+    "Favorite": false,
+    "Pinned": false,
+    "CookingTime": null,
+    "MealType": "Huvudrätt",
+    "HasMainIngredient": true,
+    "Ingredients": [
+      {
+        "Id": 2294230807,
+        "Name": "kycklingbröstfilé",
+        "Amount": "400 g",
+        "Selected": false,
+        "IsArlaProduct": false
+      },
+      {
+        "Id": 4038682112,
+        "Name": "fullkornsris",
+        "Amount": "2 dl",
+        "Selected": false,
+        "IsArlaProduct": false
+      },
+      {
+        "Id": 3623708641,
+        "Name": "salt",
+        "Amount": "1 tsk",
+        "Selected": false,
+        "IsArlaProduct": false
+      },
+      {
+        "Id": 1722222485,
+        "Name": "röd paprika",
+        "Amount": "1",
+        "Selected": true,
+        "IsArlaProduct": false
+      },
+      {
+        "Id": 3255898951,
+        "Name": "salladslök",
+        "Amount": "2",
+        "Selected": false,
+        "IsArlaProduct": false
+      },
+      {
+        "Id": 3241537136,
+        "Name": "Arla Köket Smör-\u0026rapsolja",
+        "Amount": "1 msk",
+        "Selected": false,
+        "IsArlaProduct": true
+      },
+      {
+        "Id": 1208238308,
+        "Name": "Arla Köket lätt crème fraiche paprika \u0026 chili",
+        "Amount": "2 dl",
+        "Selected": false,
+        "IsArlaProduct": true
+      }
+    ]
+  },
+  {
+    "Id": 3085975616,
+    "Name": "Gazpacho med grönsakstopping",
+    "Url": "https://www.arla.se/recept/gazpacho-med-gronsakstopping/",
+    "ImageUrl": "https://cdn-rdb.arla.com/Files/arla-se/3085975616/ec1e2387-a3fb-47c2-b988-cc4e48ac8b79.jpg",
+    "Favorite": false,
+    "Pinned": false,
+    "CookingTime": null,
+    "MealType": "Buffé, Huvudrätt",
+    "HasMainIngredient": true,
+    "Ingredients": [
+      {
+        "Id": 1941465834,
+        "Name": "Kelda Mild tomatsoppa",
+        "Amount": "5 dl",
+        "Selected": false,
+        "IsArlaProduct": true
+      },
+      {
+        "Id": 3587162361,
+        "Name": "tabasco",
+        "Amount": "1 krm",
+        "Selected": false,
+        "IsArlaProduct": false
+      },
+      {
+        "Id": 1209271750,
+        "Name": "vitvinsvinäger",
+        "Amount": "1 msk",
+        "Selected": false,
+        "IsArlaProduct": false
+      },
+      {
+        "Id": 884363637,
+        "Name": "vitlöksklyfta",
+        "Amount": "1",
+        "Selected": false,
+        "IsArlaProduct": false
+      },
+      {
+        "Id": 1722222485,
+        "Name": "röd paprika",
+        "Amount": "½",
+        "Selected": true,
+        "IsArlaProduct": false
+      },
+      {
+        "Id": 587563013,
+        "Name": "gurka",
+        "Amount": "½",
+        "Selected": false,
+        "IsArlaProduct": false
+      },
+      {
+        "Id": 544841215,
+        "Name": "tomat",
+        "Amount": "1",
+        "Selected": false,
+        "IsArlaProduct": false
+      },
+      {
+        "Id": 2192558304,
+        "Name": "blekselleri",
+        "Amount": "1 stjälk",
+        "Selected": false,
+        "IsArlaProduct": false
+      }
+    ]
+  },
+  {
+    "Id": 2699333654,
+    "Name": "Ostkryddat mos med kryddig korv",
+    "Url": "https://www.arla.se/recept/ostkryddat-mos-med-kryddig-korv/",
+    "ImageUrl": "https://cdn-rdb.arla.com/Files/arla-se/2699333654/a0ca8480-8bf4-4553-80e3-499c794e7a98.jpg",
+    "Favorite": false,
+    "Pinned": false,
+    "CookingTime": "30 min",
+    "MealType": "Huvudrätt",
+    "HasMainIngredient": true,
+    "Ingredients": [
+      {
+        "Id": 2812685293,
+        "Name": "potatis",
+        "Amount": "1 kg",
+        "Selected": false,
+        "IsArlaProduct": false
+      },
+      {
+        "Id": 1687314181,
+        "Name": "purjolök",
+        "Amount": "1",
+        "Selected": false,
+        "IsArlaProduct": false
+      },
+      {
+        "Id": 1722222485,
+        "Name": "röd paprika",
+        "Amount": "1",
+        "Selected": true,
+        "IsArlaProduct": false
+      },
+      {
+        "Id": 884363637,
+        "Name": "vitlöksklyfta",
+        "Amount": "1",
+        "Selected": false,
+        "IsArlaProduct": false
+      },
+      {
+        "Id": 4072766249,
+        "Name": "Arla mjölk",
+        "Amount": "2 dl",
+        "Selected": false,
+        "IsArlaProduct": true
+      },
+      {
+        "Id": 3612461249,
+        "Name": "Arla Köket riven ost mager",
+        "Amount": "2 dl",
+        "Selected": false,
+        "IsArlaProduct": true
+      },
+      {
+        "Id": 1821365843,
+        "Name": "KESO cottage cheese mexican salsa",
+        "Amount": "300 g",
+        "Selected": false,
+        "IsArlaProduct": true
+      },
+      {
+        "Id": 3568401161,
+        "Name": "kryddig korv",
+        "Amount": "4",
+        "Selected": false,
+        "IsArlaProduct": false
+      }
+    ]
+  },
+  {
+    "Id": 1913544872,
+    "Name": "Medelhavsgryta",
+    "Url": "https://www.arla.se/recept/medelhavsgryta/",
+    "ImageUrl": "https://cdn-rdb.arla.com/Files/arla-se/1913544872/fa01aca5-171d-4afe-836e-ffbd9feaa88a.jpg",
+    "Favorite": false,
+    "Pinned": false,
+    "CookingTime": "30 min",
+    "MealType": "Huvudrätt",
+    "HasMainIngredient": true,
+    "Ingredients": [
+      {
+        "Id": 2844857066,
+        "Name": "fläskfilé",
+        "Amount": "400 g",
+        "Selected": false,
+        "IsArlaProduct": false
+      },
+      {
+        "Id": 3623708641,
+        "Name": "salt",
+        "Amount": "½ tsk",
+        "Selected": false,
+        "IsArlaProduct": false
+      },
+      {
+        "Id": 911686672,
+        "Name": "aubergine",
+        "Amount": "1",
+        "Selected": false,
+        "IsArlaProduct": false
+      },
+      {
+        "Id": 3838187031,
+        "Name": "gul lök",
+        "Amount": "1",
+        "Selected": false,
+        "IsArlaProduct": false
+      },
+      {
+        "Id": 884363637,
+        "Name": "vitlöksklyfta",
+        "Amount": "2",
+        "Selected": false,
+        "IsArlaProduct": false
+      },
+      {
+        "Id": 1722222485,
+        "Name": "röd paprika",
+        "Amount": "1",
+        "Selected": true,
+        "IsArlaProduct": false
+      },
+      {
+        "Id": 1864803441,
+        "Name": "Arla Köket lätt crème fraiche tomat \u0026 basilika",
+        "Amount": "2 dl",
+        "Selected": false,
+        "IsArlaProduct": true
+      },
+      {
+        "Id": 317388171,
+        "Name": "vit böna",
+        "Amount": "1 burk",
+        "Selected": false,
+        "IsArlaProduct": false
+      }
+    ]
+  }
+]

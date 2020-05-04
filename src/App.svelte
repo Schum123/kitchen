@@ -1,4 +1,5 @@
 <script>
+  import Radio from "./components/Radio.svelte"
   import CInput from "./components/CInput.svelte";
   import Chip from "./components/Chip.svelte"
   import FoodCard from "./components/FoodCard.svelte"
@@ -6,22 +7,50 @@
   import { customIngridients } from "./store"
   import mockData from "../mockData"
 
+  let loading = false
+
   const mockedData = mockData;
 
   let fetchedRecipes = [];
+  let group = '865150284';
+  let mealOptions = [
+    {
+      value: "865150284",
+      text: "Huvudrätt",
+      checked: true
+    },
+    {
+      value: "1089312893",
+      text: "förrätt",
+      checked: false
+    },
+    {
+      value: "3247760446",
+      text: "frukost",
+      checked: false
+    },
+    {
+      value: "4278008420",
+      text: "efterrätt",
+      checked: false
+    }
+  ]
 
+  $: console.log('Changed selected:', group)
+  $: console.log('Updated options:', mealOptions)
 
   const getRecipes = async () => {
+    loading = true
     let searchIng = $customIngridients.map(item => item.ingredientId).join(",");
     var proxyUrl = "https://cors-anywhere.herokuapp.com/",
-      url = `https://www.arla.se/webappsfoodclub/demo/foodclubrecipes/byingredients/2092030536_186612795/${searchIng}?categoryid=865150284&skip=0&take=20`
+      url = `https://www.arla.se/webappsfoodclub/demo/foodclubrecipes/byingredients/${searchIng}?categoryid=${group}&skip=0&take=20`
 
     let response = await fetch(proxyUrl + url);
 
     let data = await response.json();
 
     fetchedRecipes = data;
-
+    loading = false
     console.log(data)
   };
 
@@ -31,15 +60,24 @@
 <main>
   <section id="right">
     <div style="max-width: 280px; align-self: flex-end;">
+      <h2>Vad vill du laga?</h2>
+      <Radio { mealOptions } bind:group/>
       <CInput />
     </div>
-    <button class="btn" on:click="{getRecipes}" style="align-self: flex-start ;">>Fetcxh</button>
+    <button class="btn" on:click="{getRecipes}" style="align-self: flex-start;">Hitta recept</button>
   </section>
   <section id="recipes">
+    {#if loading}
     <SkeletonFoodCard />
-{#each fetchedRecipes as {Name, ImageUrl, Url, Ingredients}}
-  <FoodCard title={Name} thumbnail={ImageUrl} href={Url} ingredients={Ingredients} />
-{/each}
+    <SkeletonFoodCard />
+    <SkeletonFoodCard />
+    <SkeletonFoodCard />
+    <SkeletonFoodCard />
+    {:else}
+    {#each mockedData as {Name, ImageUrl, Url, Ingredients}}
+      <FoodCard title={Name} thumbnail={ImageUrl} href={Url} ingredients={Ingredients} />
+    {/each}
+{/if}
   </section>
 </main>
 
@@ -62,7 +100,7 @@
   display: grid;
     grid-template-columns: repeat(3,1fr);
     grid-gap: 10px;
-    grid-auto-rows: minmax(350px, 230px);
+    grid-auto-rows: minmax(min-content, max-content);
     padding: 20px;
     overflow-y: scroll;
     height: calc(100vh - 40px);
