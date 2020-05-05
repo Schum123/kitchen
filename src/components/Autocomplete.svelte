@@ -1,5 +1,5 @@
 <script>
-  import { customIngridients } from "../store";
+  import { customIngridients, customMainIngridients } from "../store";
   const regExpEscape = (s) => {
     return s.replace(/[-\\^$*+?.()|[\]{}]/g, "\\$&");
   };
@@ -9,6 +9,7 @@
   export let placeholder = "";
   export let required = false;
   export let disabled = false;
+  export let mainIngridients = false;
 
   // autocomplete props
   export let items = [];
@@ -84,7 +85,11 @@
     if (index > -1) {
       value = results[index].value.name;
       let ingredientId = results[index].value.ingredientId;
-      customIngridients.addTodo(value, ingredientId);
+      if (mainIngridients) {
+        customMainIngridients.addMainIngridient(value, ingredientId);
+      } else {
+        customIngridients.addIngridients(value, ingredientId);
+      }
       search = "";
     } else if (!value) {
       //search = "";
@@ -92,7 +97,6 @@
   }
 
   function test() {
-    console.log("click");
     if (search) {
       isOpen = true;
     }
@@ -121,7 +125,6 @@
   .autocomplete-results {
     padding: 0;
     margin: 0;
-    border: 1px solid #dbdbdb;
     height: 6rem;
     overflow: auto;
     width: 100%;
@@ -186,6 +189,8 @@
     {placeholder}
     {required}
     {disabled}
+    {mainIngridients}
+    autofocus
     autocomplete="{name}"
     bind:value="{search}"
     on:input="{(event)=>onChange(event)}"

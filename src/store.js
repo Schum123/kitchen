@@ -2,15 +2,31 @@ import { writable } from "svelte/store";
 import uuid from "uuid/v4";
 
 const ingridients_ = writable([]);
+const mainIngridients_ = writable([]);
+
 const customIngridients = {
   subscribe: ingridients_.subscribe,
-  addTodo: (name, ingredientId) =>
-    ingridients_.update((todos) => [
-      ...todos,
+  addIngridients: (name, ingredientId) =>
+    ingridients_.update((ingridients) => [
+      ...ingridients,
       { name, ingredientId, id: uuid() },
     ]),
-  deleteTodo: (id) =>
-    ingridients_.update((todos) => todos.filter((todo) => todo.id !== id)),
+  deleteIngridients: (id) =>
+    ingridients_.update((ingridients) =>
+      ingridients.filter((ingridient) => ingridient.id !== id)
+    ),
 };
-console.log(customIngridients);
-export { customIngridients };
+const customMainIngridients = {
+  subscribe: mainIngridients_.subscribe,
+  addMainIngridient: (name, ingredientId) =>
+    mainIngridients_.update((mainIngridients) => [
+      ...mainIngridients,
+      { name, ingredientId, id: uuid() },
+    ]),
+  deleteMainIngridient: (id) =>
+    mainIngridients_.update((mainIngridients) =>
+      mainIngridients.filter((mainIngridient) => mainIngridient.id !== id)
+    ),
+};
+
+export { customIngridients, customMainIngridients };

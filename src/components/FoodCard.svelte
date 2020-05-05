@@ -29,10 +29,8 @@
     let node = doc.querySelector(".c-recipe__instructions-steps");
     let text = node.firstChild.nextSibling.dataset.model;
     let parseResult = JSON.parse(text);
-    instructions = parseResult.sections[0].steps[0].text;
+    instructions = parseResult.sections[0].steps;
   };
-
-  console.log(instructions);
 </script>
 
 <article data-url="{href}">
@@ -50,7 +48,7 @@
 {#if showModal}
 <Modal on:close="{() => showModal = false}">
   <h3>{title}</h3>
-  <ul>
+  <ul class="ingredients">
     {#each removedStringArray as {Name, Amount}}
     <li>
       <span>{Name}</span>
@@ -58,10 +56,16 @@
     </li>
     {/each}
   </ul>
-  <h3>Gör så här</h3>
-  <span class="instructions">
-    {instructions}
-  </span>
+  <h3 style="text-align: left;">Gör så här</h3>
+  <ol class="instructions">
+    {#each instructions as {text}}
+    <li>
+      <span class="instructions">
+        {text}
+      </span>
+    </li>
+    {/each}
+  </ol>
 </Modal>
 {/if}
 
@@ -69,6 +73,26 @@
   .modal {
   }
   .instructions {
+    margin: 0;
+    text-indent: -24px;
+    list-style-type: none;
+    counter-increment: item;
+    text-align: left;
+  }
+  .instructions li:before {
+    display: inline-block;
+    width: 1em;
+    padding-right: 0.5em;
+    font-weight: bold;
+    text-align: right;
+    content: counter(item) ".";
+  }
+
+  .instructions li {
+    margin-top: 10px;
+  }
+
+  .instructions li span {
     font-size: 18px;
     line-height: 1.5;
   }
@@ -120,20 +144,25 @@
   article:last-child {
     margin-bottom: 20px;
   }
+  ol,
   ul {
     list-style: none;
     margin: 0;
     padding: 0;
     margin-bottom: 10px;
   }
-  li {
+  ol {
+    margin-left: 20px !important;
+    margin-bottom: 20px !important;
+  }
+  .ingredients > li {
     padding: 0.5rem;
     text-align: left;
   }
-  li:nth-child(odd) {
+  .ingredients > li:nth-child(odd) {
     background-color: #f5f9ff;
   }
-  li:nth-child(even) {
+  .ingredients > li:nth-child(even) {
     background-color: var(--border);
   }
 </style>

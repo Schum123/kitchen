@@ -3,17 +3,13 @@
   import { customIngridients } from "../store"
   import Chip from "./Chip.svelte";
   import Autocomplete from "./Autocomplete.svelte"
-  import * as ingredientsList from '../../ingridients.json';
   import EmptyFridgeData from '../../testt.js'
+  export let mainIngridients
 
   const arrayOfObj = Object.entries(EmptyFridgeData.Ingredients).map((e) => ( { 'ingredientId': e[0], 'name': e[1] } ));
 </script>
 
-<Autocomplete class="input" name="fruits"  items="{arrayOfObj}" minChar="2"/>
-
-{#each $customIngridients as {name,id} (id)}
-<Chip {name} {id}/>
-{/each}
+<Autocomplete class="input" name="fruits"  items="{arrayOfObj}" minChar="2" mainIngridients={mainIngridients}/>
 
 
 <style>

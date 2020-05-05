@@ -1,7 +1,8 @@
 :root {
 	--primary-1: #F44336;
     --primary-2: #F6D87C;
-    --primary-3: #3FDC75;
+	--primary-3: #3FDC75;
+	--primary-4: #1E88E5;
     --border: #CDD9ED;
     --border-hover: #99A3BA;
     --text-color: #6C7486;

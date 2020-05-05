@@ -15,7 +15,35 @@
 {/each}
 
 <style>
-  .radio {
+  span {
+    display: block;
+    position: relative;
+    padding: 7px 20px;
+    border: var(--border-width) solid var(--border);
+    transition: background 0.3s ease, border-color 0.3s ease;
+  }
+  input {
+    display: none;
+  }
+  label {
+    cursor: pointer;
+  }
+  label:not(:first-child) {
+    margin-left: calc(var(--border-width) * -1);
+  }
+  label input:checked + span {
+    z-index: 2;
+    background: var(--color);
+    border-color: var(--color);
+    color: #fff;
+  }
+  label:first-child input + span {
+    border-radius: 6px 0 0 6px;
+  }
+  label:last-child input + span {
+    border-radius: 0 6px 6px 0;
+  }
+  /* .radio {
     --color: var(--primary-1);
     --border-hover: var(--primary-1);
     --border-width: 2px;
@@ -115,7 +143,7 @@
     background: #fff;
     -webkit-transform: scale(0.4);
     transform: scale(0.4);
-  }
+  } */
   *:before,
   *:after {
     box-sizing: inherit;
