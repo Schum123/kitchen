@@ -34,6 +34,7 @@
 <div class="modal-background" on:click="{close}"></div>
 
 <div class="modal" role="dialog" aria-modal="true" bind:this="{modal}">
+  <div class="close" on:click="{close}">X</div>
   <slot name="header"></slot>
   <slot></slot>
   <!-- svelte-ignore a11y-autofocus -->
@@ -84,5 +85,14 @@
     text-decoration: none;
     -webkit-transition: all 0.3s ease;
     transition: all 0.3s ease;
+  }
+  .close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 20px;
+    height: 20px;
+    font-weight: bold;
+    text-align: center;
   }
 </style>

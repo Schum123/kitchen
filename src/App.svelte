@@ -9,9 +9,6 @@
 
   let loading = false
   let searched = false
-
-  const mockedData = mockData;
-
   let fetchedRecipes = [];
   let group = '';
   let mealOptions = [
