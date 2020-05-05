@@ -165,7 +165,7 @@
     border: 1px solid var(--border);
     padding: 8px 16px;
     line-height: 22px;
-    font-size: 14px;
+    font-size: 16px;
     font-weight: 500;
     color: var(--text-color);
     border-radius: 6px;
