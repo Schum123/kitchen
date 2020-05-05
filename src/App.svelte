@@ -175,6 +175,7 @@
     padding: 20px;
     overflow-y: scroll;
     height: 40vh;
+    -webkit-overflow-scrolling: touch;
 }
 @media (min-width: 1281px){
   #recipes {
