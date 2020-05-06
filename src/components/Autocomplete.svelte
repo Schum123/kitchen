@@ -192,13 +192,15 @@
     {disabled}
     {mainIngridients}
     autofocus
-    autocomplete="{name}"
     bind:value="{search}"
     on:input="{(event)=>onChange(event)}"
     on:focus="{test}"
     on:blur
     on:keydown="{(event)=>onKeyDown(event)}"
     bind:this="{input}"
+    autocomplete="off"
+    autocorrect="off"
+    autocapitalize="off"
   />
   {#if search.length >= 2}
   <ul
