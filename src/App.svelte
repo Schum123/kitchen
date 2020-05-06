@@ -40,7 +40,8 @@
     var proxyUrl = "https://cors-anywhere.herokuapp.com/",
       url = `https://www.arla.se/webappsfoodclub/demo/foodclubrecipes/byingredients/${mainIngridient}/${searchIng}?categoryid=${group}&skip=0&take=20`
 
-    let response = await fetch(proxyUrl + url);
+      try {
+    let response = await fetch(proxyUrl + url, {mode: 'cors'});
 
     let data = await response.json();
 
@@ -48,6 +49,11 @@
       fetchedRecipes = []
     }else {
       fetchedRecipes = data;
+    }
+      }
+    catch(e) {
+      console.log(e)
+      searched = false
     }
     loading = false
   };
