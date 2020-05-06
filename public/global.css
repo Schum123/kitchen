@@ -1,36 +1,40 @@
 :root {
-	--primary-1: #F44336;
-    --primary-2: #F6D87C;
-	--primary-3: #3FDC75;
-	--primary-4: #1E88E5;
-    --border: #CDD9ED;
-    --border-hover: #99A3BA;
-    --text-color: #6C7486;
-    --text-color-headline: #3F4656;
+  --primary-1: #f44336;
+  --primary-2: #f6d87c;
+  --primary-3: #3fdc75;
+  --primary-4: #1e88e5;
+  --border: #cdd9ed;
+  --border-hover: #99a3ba;
+  --text-color: #6c7486;
+  --text-color-headline: #3f4656;
 }
 
-html, body {
-	position: fixed;
-	width: 100vw;
-	height: 100vh;
+html,
+body {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
 }
 
 body {
-	margin: 0;
-	box-sizing: border-box;
-	font-family: 'Encode Sans';
-	font-size: 16px;
-    line-height: 22px;
-    color: var(--text-color);
-    background: #F5F9FF;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Encode Sans";
+  font-size: 16px;
+  line-height: 22px;
+  color: var(--text-color);
+  background: #f5f9ff;
 }
 
-input, button, select, textarea {
-	font-family: inherit;
-	font-size: inherit;
-	padding: 0.4em;
-	margin: 0 0 0.5em 0;
-	box-sizing: border-box;
-	border: 1px solid #ccc;
-	border-radius: 2px;
+input,
+button,
+select,
+textarea {
+  font-family: inherit;
+  font-size: inherit;
+  padding: 0.4em;
+  margin: 0 0 0.5em 0;
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+  border-radius: 2px;
 }

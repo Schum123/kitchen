@@ -79,7 +79,7 @@
   .skel-mask {
     background: #fff;
     position: absolute;
-    z-index: 200;
+    z-index: 2;
   }
   .skel-mask-1-container {
     width: 100%;

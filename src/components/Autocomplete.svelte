@@ -56,7 +56,7 @@
       })
       .slice(0, 6);
     const height = results.length > maxItems ? maxItems : results.length;
-    list.style.height = `${height * 2.5}rem`;
+    list ? (list.style.height = `${height * 2.5}rem`) : "0px";
   }
   function onKeyDown(event) {
     if (event.keyCode === 40 && arrowCounter < results.length) {
@@ -91,6 +91,7 @@
         customIngridients.addIngridients(value, ingredientId);
       }
       search = "";
+      input.focus();
     } else if (!value) {
       //search = "";
     }

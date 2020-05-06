@@ -1,16 +1,25 @@
 <script>
-  import Radio from "./components/Radio.svelte"
+  import Radio from "./components/Radio.svelte";
   import CInput from "./components/CInput.svelte";
-  import Chip from "./components/Chip.svelte"
-  import FoodCard from "./components/FoodCard.svelte"
-  import SkeletonFoodCard from "./components/SkeletonFoodCard.svelte"
-  import { customIngridients, customMainIngridients } from "./store"
-  import mockData from "../mockData"
+  import Chip from "./components/Chip.svelte";
+  import Spinner from "./components/Spinner.svelte";
+  import FoodCard from "./components/FoodCard.svelte";
+  import SkeletonFoodCard from "./components/SkeletonFoodCard.svelte";
+  import Modal from "./components/Modal.svelte";
 
-  let loading = false
-  let searched = false
+  import { customIngridients, customMainIngridients } from "./store";
+  import mockData from "../mockData";
+  let showModal = false;
+  let loading = false;
+  let searched = false;
+  let recipesStepsLoading = true;
+  let modalRecipe = [];
   let fetchedRecipes = [];
-  let group = '';
+  let removedStringArray = [];
+  let instructions = [];
+  let group = "";
+  let href = "";
+  let title = "";
   let mealOptions = [
     {
       value: "865150284",
@@ -27,64 +36,100 @@
     {
       value: "4278008420",
       text: "efterrätt",
-    }
-  ]
+    },
+  ];
 
-  $: console.log('Changed selected:', group)
-  $: console.log('Updated options:', mealOptions)
+  function getRecipeId(event) {
+    const id = event.detail.id;
+    showModal = event.detail.showModal;
+    modalRecipe = mockData.filter((e) => e.Id === id);
+    removedStringArray = event.detail.removedStringArray;
+    href = event.detail.href;
+    title = event.detail.title;
+    getRecipesSteps(href);
+  }
   const getRecipes = async () => {
-    loading = true
-    searched = true
-    let searchIng = $customIngridients.map(item => item.ingredientId).join(",");
-    let mainIngridient = $customMainIngridients.map(item => item.ingredientId)
+    loading = true;
+    searched = true;
+    let searchIng = $customIngridients
+      .map((item) => item.ingredientId)
+      .join(",");
+    let mainIngridient = $customMainIngridients.map(
+      (item) => item.ingredientId
+    );
     var proxyUrl = "https://cors-anywhere.herokuapp.com/",
-      url = `https://www.arla.se/webappsfoodclub/demo/foodclubrecipes/byingredients/${mainIngridient}/${searchIng}?categoryid=${group}&skip=0&take=20`
+      url = `https://www.arla.se/webappsfoodclub/demo/foodclubrecipes/byingredients/${mainIngridient}/${searchIng}?categoryid=${group}&skip=0&take=20`;
 
-      try {
-    let response = await fetch(proxyUrl + url, {mode: 'cors'});
-
-    let data = await response.json();
-
-    if(Object.keys(data).length === 0) {
-      fetchedRecipes = []
-    }else {
-      fetchedRecipes = data;
-    }
+    try {
+      let response = await fetch(proxyUrl + url, { mode: "cors" });
+      let data = await response.json();
+      if (Object.keys(data).length === 0) {
+        fetchedRecipes = [];
+      } else {
+        fetchedRecipes = data;
       }
-    catch(e) {
-      console.log(e)
-      searched = false
+    } catch (e) {
+      console.log(e);
+      searched = false;
     }
-    loading = false
+    loading = false;
   };
 
+  const getRecipesSteps = async (href) => {
+    showModal = true;
+    var proxyUrl = "https://cors-anywhere.herokuapp.com/",
+      url = href;
+    try {
+      recipesStepsLoading = true;
+      let response = await fetch(proxyUrl + url);
+      let data = await response.text();
+      var parser = new DOMParser();
+      var doc = parser.parseFromString(data, "text/html");
+      let node = doc.querySelector(".c-recipe__instructions-steps");
+      let text = node.firstChild.nextSibling.dataset.model;
+      let parseResult = JSON.parse(text);
+      instructions = parseResult.sections[0].steps;
+    } catch (e) {
+      throw e;
+    }
+    recipesStepsLoading = false;
+  };
 </script>
 
 <main>
-  <section id="right">
+  <section id="left">
     <div class="wrapper">
       <h2 style="text-align: center;">Vad vill du laga?</h2>
-      <div class="radio-group" style="--color:var(--primary-4);">
-      <Radio { mealOptions } bind:group/>
-    </div>
-    {#if group !== "" && $customMainIngridients.length < 1}
-    <h3>Välj huvudingrediens</h3>
-      <CInput mainIngridients/>
-    {/if}
-
-      {#if group !== "" && $customMainIngridients.length > 0}
+      <div class="radio-group" style="--color: var(--primary-4);">
+        <Radio { mealOptions } bind:group></Radio>
+      </div>
+      {#if group !== "" && $customMainIngridients.length < 1}
+      <h3>Välj huvudingrediens</h3>
+      <CInput mainIngridients></CInput>
+      {/if} {#if group !== "" && $customMainIngridients.length > 0}
       <h3>Lägg till fler ingredienser</h3>
-        <CInput />
-      <button class="btn" on:click="{getRecipes}" style="align-self: flex-start; margin: 0 auto; display: block; margin-bottom: 15px;">Hitta recept</button>
+      <CInput></CInput>
+      <button
+        class="btn"
+        on:click="{getRecipes}"
+        style="
+          align-self: flex-start;
+          margin: 0 auto;
+          display: block;
+          margin-bottom: 15px;
+        "
+      >
+        Hitta recept
+      </button>
       <div class="chip-wrapper">
         {#each $customMainIngridients as {name,id} (id)}
-          <Chip {name} {id} color="#f44336"/>
+        <Chip {name} {id} color="#f44336"></Chip>
+        {/each} {#each $customIngridients as {name,id} (id)}
+        <Chip {name} {id} color="#23c4f8"></Chip>
         {/each}
-        {#each $customIngridients as {name,id} (id)}
-          <Chip {name} {id} color="#23c4f8"/>
-        {/each}
+      </div>
+      {/if}
     </div>
-    {/if}
   </section>
 
   {#if !searched}
@@ -92,26 +137,102 @@
     <h1>Välj vilken typ av rätt du vill laga och lägg till ingredienser</h1>
   </section>
   {:else}
-
   <section id="recipes">
-{#if loading}
-    <SkeletonFoodCard />
-    <SkeletonFoodCard />
-    <SkeletonFoodCard />
-    <SkeletonFoodCard />
-    <SkeletonFoodCard />
-{:else}
-    {#each fetchedRecipes as {Name, ImageUrl, Url, Ingredients}}
-      <FoodCard title={Name} thumbnail={ImageUrl} href={Url} ingredients={Ingredients} />
-    {/each}
-{/if}
-
+    {#if loading}
+    <SkeletonFoodCard></SkeletonFoodCard>
+    <SkeletonFoodCard></SkeletonFoodCard>
+    <SkeletonFoodCard></SkeletonFoodCard>
+    <SkeletonFoodCard></SkeletonFoodCard>
+    <SkeletonFoodCard></SkeletonFoodCard>
+    {:else} {#each fetchedRecipes as {Name, ImageUrl, Url, Ingredients, Id}}
+    <FoodCard
+      title="{Name}"
+      thumbnail="{ImageUrl}"
+      href="{Url}"
+      ingredients="{Ingredients}"
+      id="{Id}"
+      on:recipeId="{getRecipeId}"
+    ></FoodCard>
+    {/each} {/if}
+    <div style="height: 100px;"></div>
   </section>
-  {/if}
 
+  {/if} {#if showModal}
+  <Modal on:close="{() => showModal = false}">
+    <h3>{title}</h3>
+    <ul class="ingredients">
+      {#each removedStringArray as {Name, Amount}}
+      <li>
+        <span>{Name}</span>
+        <span>{Amount}</span>
+      </li>
+      {/each}
+    </ul>
+    {#if recipesStepsLoading}
+    <h3 style="text-align: center;">Laddar recept steg...</h3>
+    <Spinner></Spinner>
+    {:else}
+    <h3 style="text-align: left;">Gör så här</h3>
+    <ol class="instructions">
+      {#each instructions as {text}}
+      <li>
+        <span class="instructions">
+          {text}
+        </span>
+      </li>
+      {/each}
+    </ol>
+    {/if}
+  </Modal>
+  {/if}
 </main>
 
 <style>
+  .instructions {
+    margin: 0;
+    text-indent: -24px;
+    list-style-type: none;
+    counter-increment: item;
+    text-align: left;
+  }
+  .instructions li:before {
+    display: inline-block;
+    width: 1em;
+    padding-right: 0.5em;
+    font-weight: bold;
+    text-align: right;
+    content: counter(item) ".";
+  }
+
+  .instructions li {
+    margin-top: 10px;
+  }
+
+  .instructions li span {
+    font-size: 18px;
+    line-height: 1.5;
+  }
+  ol,
+  ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    margin-bottom: 10px;
+  }
+  ol {
+    margin-left: 20px !important;
+    margin-bottom: 20px !important;
+  }
+  .ingredients > li {
+    padding: 0.5rem;
+    text-align: left;
+  }
+  .ingredients > li:nth-child(odd) {
+    background-color: #f5f9ff;
+  }
+  .ingredients > li:nth-child(even) {
+    background-color: var(--border);
+  }
   .wrapper {
     max-width: 380px;
     margin: 0 auto;
@@ -119,24 +240,23 @@
 
   .chip-wrapper {
     max-height: 105px;
-    min-height: 105px;
     overflow: scroll;
   }
   @media (min-width: 1281px) {
     .chip-wrapper {
-    max-height: none;
-    min-height: unset;
-    overflow: unset;
+      max-height: none;
+      min-height: unset;
+      overflow: unset;
     }
   }
   main {
     display: flex;
-    justify-content: space-around;
     flex-direction: column;
+    height: 100vh;
   }
   @media (min-width: 1281px) {
     main {
-    flex-direction: row;
+      flex-direction: row;
     }
   }
 
@@ -153,26 +273,26 @@
     }
   }
 
-.radio-group {
-  --color: var(--primary-1);
+  .radio-group {
+    --color: var(--primary-1);
     --border-width: 2px;
     display: -webkit-box;
     display: flex;
     font-size: 14px;
     font-weight: 600;
     margin-bottom: 20px;
-}
-#start {
-  order: -1;
-}
-@media (min-width: 1281px) {
-  #start {
-    margin-top: 30vh;
-    width: 60%;
-    order: 0;
   }
-}
-#recipes {
+  #start {
+    order: -1;
+  }
+  @media (min-width: 1281px) {
+    #start {
+      margin-top: 30vh;
+      width: 60%;
+      order: 0;
+    }
+  }
+  #recipes {
     margin-top: 0;
     display: grid;
     grid-template-columns: 1fr;
@@ -180,40 +300,41 @@
     grid-auto-rows: minmax(min-content, max-content);
     padding: 20px;
     overflow-y: scroll;
-    height: 40vh;
+    height: auto;
     -webkit-overflow-scrolling: touch;
-}
-@media (min-width: 1281px){
-  #recipes {
-    width: calc(60% - 40px);
-    grid-template-columns: repeat(3,1fr);
-    height: calc(100vh - 40px);
   }
-}
+  @media (min-width: 1281px) {
+    #recipes {
+      width: calc(60% - 40px);
+      grid-template-columns: repeat(3, 1fr);
+      height: calc(100vh - 40px);
+    }
+  }
 
-#right {
-  margin-bottom: 20px;
-  position: relative;
-}
-#right:after {
-  content: '';
+  #left {
+    margin-bottom: 20px;
+    position: relative;
+  }
+  #left:after {
+    content: "";
     height: 30px;
     width: 100%;
     position: absolute;
     bottom: -37px;
-    z-index: 1;
     backdrop-filter: blur(2px);
-}
-@media (min-width: 1081px){
-#right {
-    padding-top: 30vh;
-    width: 40%;
-    height: 100vh;
-    border-right: 1px solid var(--border);
+    -webkit-backdrop-filter: blur(2px);
+    z-index: 9;
   }
-}
-.btn {
---color: var(--primary-3);
+  @media (min-width: 1081px) {
+    #left {
+      padding-top: 30vh;
+      width: 40%;
+      height: 100vh;
+      border-right: 1px solid var(--border);
+    }
+  }
+  .btn {
+    --color: var(--primary-3);
     --text: #fff;
     display: inline-block;
     text-align: center;
@@ -230,6 +351,6 @@
     background: var(--color);
     border-radius: 6px;
     text-decoration: none;
-    transition: all .3s ease;
-}
+    transition: all 0.3s ease;
+  }
 </style>

@@ -38,7 +38,9 @@
   <slot name="header"></slot>
   <slot></slot>
   <!-- svelte-ignore a11y-autofocus -->
-  <button class="btn" on:click="{close}">Stäng</button>
+  <div style="align-self: flex-start; margin-top: auto;">
+    <button class="btn" on:click="{close}">Stäng</button>
+  </div>
 </div>
 
 <style>
@@ -49,23 +51,36 @@
     width: 100%;
     height: 100%;
     background: rgba(0, 0, 0, 0.3);
-    z-index: 1;
+    z-index: 99;
   }
   .modal {
+    display: flex;
+    flex-direction: column;
     position: absolute;
-    left: 50%;
-    top: 50%;
+    left: 8px;
+    top: 8px;
     width: calc(100vw - 4em);
     max-width: 32em;
-    max-height: calc(100vh - 4em);
     overflow: auto;
-    transform: translate(-50%, -50%);
+    max-height: calc(100vh - 4em);
+    height: calc(100vh - 180px);
     padding: 24px;
     border-radius: 0.2em;
     background: white;
-    z-index: 2;
+    z-index: 100;
+  }
+
+  @media (min-width: 1281px) {
+    .modal {
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      height: auto;
+    }
   }
   button {
+    align-self: flex-start;
+    margin-top: auto;
     --color: var(--primary-2);
     display: block;
     --text: #fff;
