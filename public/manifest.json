@@ -3,7 +3,7 @@
   "short_name": "Töm din kyl",
   "theme_color": "#6c7486",
   "background_color": "#f5f9ff",
-  "display": "standalone",
+  "display": "fullscreen",
   "Scope": "/",
   "start_url": "/index.html",
   "icons": [
