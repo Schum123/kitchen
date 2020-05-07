@@ -16,17 +16,26 @@
 
 <style>
   span {
-    display: block;
     position: relative;
-    padding: 7px 20px;
     border: var(--border-width) solid var(--border);
     transition: background 0.3s ease, border-color 0.3s ease;
+    flex: 1;
+    line-height: 35px;
+  }
+  @media (min-width: 768px) {
+    .span {
+      padding: 7px 20px;
+    }
   }
   input {
     display: none;
   }
   label {
     cursor: pointer;
+    display: flex;
+    flex: 1;
+    text-align: center;
+    height: 40px;
   }
   label:not(:first-child) {
     margin-left: calc(var(--border-width) * -1);

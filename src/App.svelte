@@ -99,8 +99,14 @@
 <main>
   <section id="left">
     <div class="wrapper">
-      <h2 style="text-align: center;">Vad vill du laga?</h2>
-      <div class="radio-group" style="--color: var(--primary-4);">
+      {#if !searched}
+      <h2 class="mobile-only">Vad vill du laga?</h2>
+      {/if}
+      <h2 class="desktop-only">Vad vill du laga?</h2>
+      <div
+        class="radio-group {searched ? 'searched' : ''}"
+        style="--color: var(--primary-4);"
+      >
         <Radio { mealOptions } bind:group></Radio>
       </div>
       {#if group !== "" && $customMainIngridients.length < 1}
@@ -137,7 +143,7 @@
     <h1>Välj vilken typ av rätt du vill laga och lägg till ingredienser</h1>
   </section>
   {:else}
-  <section id="recipes">
+  <section id="recipes" class="{showModal ? 'modal-open' : ''}">
     {#if loading}
     <SkeletonFoodCard></SkeletonFoodCard>
     <SkeletonFoodCard></SkeletonFoodCard>
@@ -188,6 +194,23 @@
 </main>
 
 <style>
+  .desktop-only {
+    display: none;
+  }
+  @media only screen and (min-width: 1280px) {
+    .desktop-only {
+      display: block;
+      text-align: center;
+    }
+  }
+  .mobile-only {
+    text-align: center;
+  }
+  @media only screen and (min-width: 1280px) {
+    .mobile-only {
+      display: none;
+    }
+  }
   .instructions {
     margin: 0;
     text-indent: -24px;
@@ -253,9 +276,11 @@
     display: flex;
     flex-direction: column;
     height: 100vh;
+    padding: 0 15px;
   }
   @media (min-width: 1281px) {
     main {
+      padding: 0;
       flex-direction: row;
     }
   }
@@ -282,6 +307,9 @@
     font-weight: 600;
     margin-bottom: 20px;
   }
+  .radio-group.searched {
+    margin-top: 20px;
+  }
   #start {
     order: -1;
   }
@@ -302,6 +330,19 @@
     overflow-y: scroll;
     height: auto;
     -webkit-overflow-scrolling: touch;
+  }
+  #recipes.modal-open {
+    overflow: hidden;
+  }
+  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) {
+    #recipes {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) {
+    #recipes {
+      grid-template-columns: repeat(2, 1fr);
+    }
   }
   @media (min-width: 1281px) {
     #recipes {

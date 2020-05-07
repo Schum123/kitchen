@@ -62,6 +62,7 @@
     width: calc(100vw - 4em);
     max-width: 32em;
     overflow: auto;
+    -webkit-overflow-scrolling: touch;
     max-height: calc(100vh - 4em);
     height: calc(100vh - 180px);
     padding: 24px;
@@ -70,12 +71,13 @@
     z-index: 100;
   }
 
-  @media (min-width: 1281px) {
+  @media (min-width: 768px) {
     .modal {
       left: 50%;
-      top: 50%;
+      top: 47%;
       transform: translate(-50%, -50%);
       height: auto;
+      max-height: calc(100vh - 9em);
     }
   }
   button {
@@ -102,12 +104,15 @@
     transition: all 0.3s ease;
   }
   .close {
-    position: absolute;
-    top: 10px;
-    right: 10px;
+    position: sticky;
+    position: -webkit-sticky;
+    transform: translate(20px, -16px);
+    margin-left: auto;
+    top: 0;
     width: 20px;
     height: 20px;
     font-weight: bold;
     text-align: center;
+    margin-bottom: -40px;
   }
 </style>
