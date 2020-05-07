@@ -2,7 +2,11 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, viewport-fit=cover"
+    />
+
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <link rel="manifest" href="/manifest.json" />
     <noscript>Your browser does not support JavaScript!</noscript>
@@ -24,7 +28,10 @@
 
     <meta name="msapplication-config" content="/browserconfig.xml" />
     <meta name="apple-mobile-web-app-capable" content="yes" />
-    <meta name="apple-mobile-web-app-status-bar-style" content="white" />
+    <meta
+      name="apple-mobile-web-app-status-bar-style"
+      content="black-translucent"
+    />
     <meta name="apple-mobile-web-app-title" content="pwa" />
 
     <link
@@ -123,6 +130,10 @@
         line-height: 22px;
         color: var(--text-color);
         background: #f5f9ff;
+      }
+
+      body.standalone {
+        margin-top: 50px;
       }
 
       input,

@@ -13,6 +13,9 @@
     console.log(navigator);
     navigator.serviceWorker.register("/service-worker.js");
   }
+  const isInWebAppiOS = window.navigator.standalone == true;
+  isInWebAppiOS ? (document.body.className = "standalone") : "";
+
   let showModal = false;
   let loading = false;
   let searched = false;
