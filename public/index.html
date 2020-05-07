@@ -1,19 +1,144 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-	<meta charset='utf-8'>
-	<meta name='viewport' content='width=device-width,initial-scale=1'>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <link rel="manifest" href="/manifest.json" />
+    <noscript>Your browser does not support JavaScript!</noscript>
 
-	<title>Svelte app</title>
+    <title>Töm din kyl</title>
+    <meta
+      name="description"
+      content="Laga med det du har hemma. Skriv in ingredienserna du vill använda och få goda förslag. Både miljö- och plånbokssmart!"
+    />
 
-	<link rel='icon' type='image/png' href='/favicon.png'>
-	<link rel='stylesheet' href='/global.css'>
-	<link rel='stylesheet' href='/build/bundle.css'>
-	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Encode+Sans:400,500,600,700">
+    <link rel="icon" type="image/png" href="/favicon.png" />
+    <!-- <link rel="stylesheet" href="/bundle.css" /> -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#f5f9ff" />
+    <meta name="msapplication-TileColor" content="#2b5797" />
+    <meta name="theme-color" content="#f5f9ff" />
 
-	<script defer src='/build/bundle.js'></script>
-</head>
+    <meta name="msapplication-config" content="/browserconfig.xml" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="white" />
+    <meta name="apple-mobile-web-app-title" content="pwa" />
 
-<body>
-</body>
+    <link
+      href="splashscreens/iphone5_splash.png"
+      media="(device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2)"
+      rel="apple-touch-startup-image"
+    />
+    <link
+      href="splashscreens/iphone6_splash.png"
+      media="(device-width: 375px) and (device-height: 667px) and (-webkit-device-pixel-ratio: 2)"
+      rel="apple-touch-startup-image"
+    />
+    <link
+      href="splashscreens/iphoneplus_splash.png"
+      media="(device-width: 621px) and (device-height: 1104px) and (-webkit-device-pixel-ratio: 3)"
+      rel="apple-touch-startup-image"
+    />
+    <link
+      href="splashscreens/iphonex_splash.png"
+      media="(device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3)"
+      rel="apple-touch-startup-image"
+    />
+    <link
+      href="splashscreens/ipad_splash.png"
+      media="(device-width: 768px) and (device-height: 1024px) and (-webkit-device-pixel-ratio: 2)"
+      rel="apple-touch-startup-image"
+    />
+    <link
+      href="splashscreens/ipadpro1_splash.png"
+      media="(device-width: 834px) and (device-height: 1112px) and (-webkit-device-pixel-ratio: 2)"
+      rel="apple-touch-startup-image"
+    />
+    <link
+      href="splashscreens/ipadpro2_splash.png"
+      media="(device-width: 1024px) and (device-height: 1366px) and (-webkit-device-pixel-ratio: 2)"
+      rel="apple-touch-startup-image"
+    />
+
+    <script defer src="/bundle.js"></script>
+    <style>
+      @font-face {
+        font-family: "Encode Sans";
+        font-style: normal;
+        font-weight: 400;
+        font-display: swap;
+        src: local("Pacifico Regular"), local("Pacifico Regular"),
+          url(/EncodeSans-Regular.ttf);
+      }
+      @font-face {
+        font-family: "Encode Sans";
+        font-style: normal;
+        font-weight: 500;
+        font-display: swap;
+        src: local("Pacifico Regular"), local("Pacifico Regular"),
+          url(/EncodeSans-Medium.ttf);
+      }
+      @font-face {
+        font-family: "Encode Sans";
+        font-style: normal;
+        font-weight: 600;
+        font-display: swap;
+        src: local("Pacifico Regular"), local("Pacifico Regular"),
+          url(/EncodeSans-SemiBold.ttf);
+      }
+      @font-face {
+        font-family: "Encode Sans";
+        font-style: normal;
+        font-weight: 700;
+        font-display: swap;
+        src: local("Pacifico Regular"), local("Pacifico Regular"),
+          url(/EncodeSans-Bold.ttf);
+      }
+      :root {
+        --primary-1: #f44336;
+        --primary-2: #f6d87c;
+        --primary-3: #3fdc75;
+        --primary-4: #1e88e5;
+        --border: #cdd9ed;
+        --border-hover: #99a3ba;
+        --text-color: #6c7486;
+        --text-color-headline: #3f4656;
+      }
+
+      html,
+      body {
+        position: fixed;
+        width: 100vw;
+        height: 100vh;
+      }
+
+      body {
+        margin: 0;
+        box-sizing: border-box;
+        font-family: "Encode Sans", sans-serif;
+        font-size: 16px;
+        line-height: 22px;
+        color: var(--text-color);
+        background: #f5f9ff;
+      }
+
+      input,
+      button,
+      select,
+      textarea {
+        font-family: inherit;
+        font-size: inherit;
+        padding: 0.4em;
+        margin: 0 0 0.5em 0;
+        box-sizing: border-box;
+        border: 1px solid #ccc;
+        border-radius: 2px;
+      }
+    </style>
+  </head>
+
+  <body></body>
 </html>

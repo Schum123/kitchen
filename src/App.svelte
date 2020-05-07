@@ -9,6 +9,10 @@
 
   import { customIngridients, customMainIngridients } from "./store";
   import mockData from "../mockData";
+  if ("serviceWorker" in navigator) {
+    console.log(navigator);
+    navigator.serviceWorker.register("/service-worker.js");
+  }
   let showModal = false;
   let loading = false;
   let searched = false;
