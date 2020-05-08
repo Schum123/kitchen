@@ -102,7 +102,6 @@
     recipesStepsLoading = false;
   };
 </script>
-
 <main>
   <section id="left">
     <div class="wrapper">
@@ -166,13 +165,14 @@
       id="{Id}"
       on:recipeId="{getRecipeId}"
     ></FoodCard>
-    {/each} {/if}
+    {/each} {/if} {#if !isInWebAppiOS}
     <div style="height: 100px;"></div>
+    {/if}
   </section>
 
   {/if} {#if showModal}
   <Modal on:close="{() => showModal = false}">
-    <h3>{title}</h3>
+    <h3 class="recipe-title {isInWebAppiOS ? 'standalone' : ''}">{title}</h3>
     <ul class="ingredients">
       {#each removedStringArray as {Name, Amount}}
       <li>
@@ -201,6 +201,12 @@
 </main>
 
 <style>
+  .recipe-title {
+    color: var(--recipe-title);
+  }
+  h3.standalone {
+    margin-top: 45px;
+  }
   .desktop-only {
     display: none;
   }
@@ -220,7 +226,7 @@
   }
   .instructions {
     margin: 0;
-    text-indent: -24px;
+    text-indent: -20px;
     list-style-type: none;
     counter-increment: item;
     text-align: left;
@@ -232,15 +238,18 @@
     font-weight: bold;
     text-align: right;
     content: counter(item) ".";
+    color: inherit;
   }
 
   .instructions li {
     margin-top: 10px;
+    color: var(--text-color-inverted);
   }
 
   .instructions li span {
     font-size: 18px;
     line-height: 1.5;
+    color: var(--recipe-title);
   }
   ol,
   ul {
@@ -258,10 +267,11 @@
     text-align: left;
   }
   .ingredients > li:nth-child(odd) {
-    background-color: #f5f9ff;
+    background-color: var(--color-odd);
+    color: var(--text-color-inverted);
   }
   .ingredients > li:nth-child(even) {
-    background-color: var(--border);
+    background-color: var(--color-even);
   }
   .wrapper {
     max-width: 380px;
@@ -337,6 +347,7 @@
     overflow-y: scroll;
     height: auto;
     -webkit-overflow-scrolling: touch;
+    margin-bottom: env(safe-area-inset-bottom);
   }
   #recipes.modal-open {
     overflow: hidden;

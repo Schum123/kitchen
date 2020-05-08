@@ -104,22 +104,56 @@
         src: local("Pacifico Regular"), local("Pacifico Regular"),
           url(/EncodeSans-Bold.ttf);
       }
-      :root {
-        --primary-1: #f44336;
-        --primary-2: #f6d87c;
-        --primary-3: #3fdc75;
-        --primary-4: #1e88e5;
-        --border: #cdd9ed;
-        --border-hover: #99a3ba;
-        --text-color: #6c7486;
-        --text-color-headline: #3f4656;
+
+      @media (prefers-color-scheme: dark) {
+        :root {
+          --primary-1: #f44336;
+          --primary-2: #f6d87c;
+          --primary-3: #3fdc75;
+          --primary-4: #1e88e5;
+          --border: #cdd9ed;
+          --border-hover: #99a3ba;
+          --text-color: #ffffff;
+          --text-color-inverted: #6c7486;
+          --text-color-headline: #ffffff;
+          --background-color: #3b3d42;
+          --card-background: #3b3d42;
+          --input-color: #3b3d42;
+          --color-even: #828386;
+          --color-odd: #ffffff;
+          --recipe-title: #828386;
+        }
+      }
+
+      @media (prefers-color-scheme: light) {
+        :root {
+          --primary-1: #f44336;
+          --primary-2: #f6d87c;
+          --primary-3: #3fdc75;
+          --primary-4: #1e88e5;
+          --border: #cdd9ed;
+          --border-hover: #99a3ba;
+          --text-color: #6c7486;
+          --text-color-inverted: #ffffff;
+          --text-color-headline: #3f4656;
+          --background-color: #f5f9ff;
+          --card-background: #ffffff;
+          --input-color: #3b3d42;
+          --color-even: #cdd9ed;
+          --color-odd: #f5f9ff;
+          --recipe-title: #f5f9ff;
+        }
       }
 
       html,
       body {
-        position: fixed;
+        /* position: fixed; */
+        position: sticky;
+        position: -webkit-sticky;
         width: 100vw;
         height: 100vh;
+        margin-bottom: env(safe-area-inset-bottom);
+        overflow: hidden;
       }
 
       body {
@@ -129,11 +163,12 @@
         font-size: 16px;
         line-height: 22px;
         color: var(--text-color);
-        background: #f5f9ff;
+        background: var(--background-color);
+        position: fixed;
       }
 
       body.standalone {
-        margin-top: 50px;
+        padding-top: env(safe-area-inset-top);
       }
 
       input,

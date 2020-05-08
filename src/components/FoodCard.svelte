@@ -49,7 +49,7 @@
   }
   article {
     padding: 24px;
-    background: #fff;
+    background: var(--card-background);
     border-radius: 8px;
     box-shadow: 0 2px 4px var(--shadow);
     border: 1px solid var(--border);

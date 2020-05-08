@@ -21,7 +21,7 @@
     transition: background 0.3s ease, border-color 0.3s ease;
     flex: 1;
     line-height: 35px;
-    color: #545a69
+    color: var(--text-color)
   }
   @media (min-width: 768px) {
     .span {

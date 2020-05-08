@@ -157,7 +157,7 @@
   }
 
   .form-field {
-    --color: var(--primary-1);
+    --color: var(--border-hover);
     outline: none;
     display: block;
     width: 100%;
@@ -168,7 +168,7 @@
     line-height: 22px;
     font-size: 16px;
     font-weight: 500;
-    color: var(--text-color);
+    color: var(--input-color);
     border-radius: 6px;
     transition: border 0.3s ease;
   }

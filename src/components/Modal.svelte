@@ -1,5 +1,7 @@
 <script>
   import { createEventDispatcher, onDestroy } from "svelte";
+  const isInWebAppiOS = window.navigator.standalone == true;
+
   const dispatch = createEventDispatcher();
   const close = () => dispatch("close");
   let modal;
@@ -33,10 +35,17 @@
 
 <div class="modal-background" on:click="{close}"></div>
 
-<div class="modal" role="dialog" aria-modal="true" bind:this="{modal}">
-  <div class="close" on:click="{close}">X</div>
+<div
+  class="modal {isInWebAppiOS ? 'standalone' : ''}"
+  role="dialog"
+  aria-modal="true"
+  bind:this="{modal}"
+>
+  <div class="notch"></div>
   <slot name="header"></slot>
-  <slot></slot>
+  <div class="modal-inner">
+    <slot></slot>
+  </div>
   <!-- svelte-ignore a11y-autofocus -->
   <div style="align-self: flex-start; margin-top: auto;">
     <button class="btn" on:click="{close}">Stäng</button>
@@ -44,6 +53,42 @@
 </div>
 
 <style>
+  .notch {
+    height: 34px;
+    background-color: #abaeb2;
+    width: calc(100vw - 165px);
+    margin: 0 auto;
+    border-bottom-left-radius: 2em;
+    border-bottom-right-radius: 2em;
+    position: relative;
+    z-index: 10;
+    display: none;
+  }
+  .notch:before {
+    content: "";
+    width: 7px;
+    height: 7px;
+    position: absolute;
+    background-color: #abaeb2;
+    left: -2px;
+    top: -6px;
+    border-radius: 6px;
+  }
+  .notch:after {
+    content: "";
+    width: 7px;
+    height: 7px;
+    position: absolute;
+    background-color: #abaeb2;
+    right: -2px;
+    top: -6px;
+    border-radius: 6px;
+  }
+  @media (min-width: 768px) {
+    .notch {
+      display: none;
+    }
+  }
   .modal-background {
     position: fixed;
     top: 0;
@@ -61,14 +106,46 @@
     top: 8px;
     width: calc(100vw - 4em);
     max-width: 32em;
-    overflow: auto;
+    overflow: hidden;
     -webkit-overflow-scrolling: touch;
-    max-height: calc(100vh - 4em);
+    max-height: calc(100vh - 42px);
     height: calc(100vh - 180px);
     padding: 24px;
     border-radius: 0.2em;
     background: white;
     z-index: 100;
+    padding-top: 0;
+  }
+  .modal-inner {
+    overflow: scroll;
+    width: 100%;
+    margin-bottom: 24px;
+    width: calc(100vw - 4em);
+    height: 100%;
+    margin-top: 0px;
+  }
+  @media (min-width: 768px) {
+    .modal-inner {
+      max-width: 32em;
+      margin-top: 0;
+    }
+  }
+
+  .modal-inner::-webkit-scrollbar {
+    -webkit-appearance: none;
+    width: 0;
+    height: 0;
+  }
+  .modal.standalone {
+    --safe-area-inset-top: env(safe-area-inset-top);
+    height: calc(100% + var(--safe-area-inset-top));
+    border-radius: 2em;
+  }
+  .modal.standalone .notch {
+    display: block;
+  }
+  .modal.standalone .modal-inner {
+    margin-top: -31px;
   }
 
   @media (min-width: 768px) {
@@ -102,17 +179,5 @@
     text-decoration: none;
     -webkit-transition: all 0.3s ease;
     transition: all 0.3s ease;
-  }
-  .close {
-    position: sticky;
-    position: -webkit-sticky;
-    transform: translate(20px, -16px);
-    margin-left: auto;
-    top: 0;
-    width: 20px;
-    height: 20px;
-    font-weight: bold;
-    text-align: center;
-    margin-bottom: -40px;
   }
 </style>
