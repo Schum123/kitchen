@@ -16,7 +16,7 @@
   const isInWebAppiOS = window.navigator.standalone == true;
   isInWebAppiOS ? (document.body.className = "standalone") : "";
 
-  let showModal = false;
+  let showModal = true;
   let loading = false;
   let searched = false;
   let recipesStepsLoading = true;
@@ -64,8 +64,8 @@
     let mainIngridient = $customMainIngridients.map(
       (item) => item.ingredientId
     );
-    var proxyUrl = "https://cors-anywhere.herokuapp.com/",
-      url = `https://www.arla.se/webappsfoodclub/demo/foodclubrecipes/byingredients/${mainIngridient}/${searchIng}?categoryid=${group}&skip=0&take=20`;
+    var proxyUrl = process.env.PROXY_URL,
+      url = `${process.env.API_URL}${mainIngridient}/${searchIng}?categoryid=${group}&skip=0&take=20`;
 
     try {
       let response = await fetch(proxyUrl + url, { mode: "cors" });
@@ -84,7 +84,7 @@
 
   const getRecipesSteps = async (href) => {
     showModal = true;
-    var proxyUrl = "https://cors-anywhere.herokuapp.com/",
+    var proxyUrl = process.env.PROXY_URL,
       url = href;
     try {
       recipesStepsLoading = true;
@@ -182,10 +182,12 @@
       {/each}
     </ul>
     {#if recipesStepsLoading}
-    <h3 style="text-align: center;">Laddar recept steg...</h3>
+    <h3 class="loading-title" style="text-align: center;">
+      Laddar recept steg...
+    </h3>
     <Spinner></Spinner>
     {:else}
-    <h3 style="text-align: left;">Gör så här</h3>
+    <h3 class="instructions-title" style="text-align: left;">Gör så här</h3>
     <ol class="instructions">
       {#each instructions as {text}}
       <li>
@@ -196,13 +198,26 @@
       {/each}
     </ol>
     {/if}
+    <ol class="instructions">
+      <li>
+        <span class="instructions">
+          asdf
+        </span>
+      </li>
+    </ol>
   </Modal>
   {/if}
 </main>
 
 <style>
+  .instructions-title {
+    color: var(--instructions-color);
+  }
+  .loading-title {
+    color: var(--instructions-color);
+  }
   .recipe-title {
-    color: var(--recipe-title);
+    color: var(--instructions-color);
   }
   h3.standalone {
     margin-top: 45px;
@@ -243,13 +258,13 @@
 
   .instructions li {
     margin-top: 10px;
-    color: var(--text-color-inverted);
+    color: var(--instructions-color);
   }
 
   .instructions li span {
     font-size: 18px;
     line-height: 1.5;
-    color: var(--recipe-title);
+    color: var(--instructions-color);
   }
   ol,
   ul {
@@ -268,7 +283,7 @@
   }
   .ingredients > li:nth-child(odd) {
     background-color: var(--color-odd);
-    color: var(--text-color-inverted);
+    color: var(--instructions-color);
   }
   .ingredients > li:nth-child(even) {
     background-color: var(--color-even);
