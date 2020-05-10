@@ -55,7 +55,7 @@
 <style>
   .notch {
     height: 34px;
-    background-color: #abaeb2;
+    background-color: var(--notch);
     width: calc(100vw - 165px);
     margin: 0 auto;
     border-bottom-left-radius: 2em;
@@ -69,7 +69,7 @@
     width: 7px;
     height: 7px;
     position: absolute;
-    background-color: #abaeb2;
+    background-color: var(--notch);
     left: -2px;
     top: -6px;
     border-radius: 6px;
@@ -79,7 +79,7 @@
     width: 7px;
     height: 7px;
     position: absolute;
-    background-color: #abaeb2;
+    background-color: var(--notch);
     right: -2px;
     top: -6px;
     border-radius: 6px;

@@ -16,7 +16,7 @@
   const isInWebAppiOS = window.navigator.standalone == true;
   isInWebAppiOS ? (document.body.className = "standalone") : "";
 
-  let showModal = true;
+  let showModal = false;
   let loading = false;
   let searched = false;
   let recipesStepsLoading = true;
@@ -198,13 +198,6 @@
       {/each}
     </ol>
     {/if}
-    <ol class="instructions">
-      <li>
-        <span class="instructions">
-          asdf
-        </span>
-      </li>
-    </ol>
   </Modal>
   {/if}
 </main>
