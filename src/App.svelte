@@ -10,7 +10,6 @@
   import { customIngridients, customMainIngridients } from "./store";
   import mockData from "../mockData";
   if ("serviceWorker" in navigator) {
-    console.log(navigator);
     navigator.serviceWorker.register("/service-worker.js");
   }
   const isInWebAppiOS = window.navigator.standalone == true;
@@ -351,7 +350,6 @@
     grid-template-columns: 1fr;
     grid-gap: 10px;
     grid-auto-rows: minmax(min-content, max-content);
-    padding: 20px;
     overflow-y: scroll;
     height: auto;
     -webkit-overflow-scrolling: touch;
@@ -363,6 +361,7 @@
   @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) {
     #recipes {
       grid-template-columns: repeat(3, 1fr);
+      padding: 20px;
     }
   }
   @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) {
