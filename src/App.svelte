@@ -173,8 +173,8 @@
   <Modal on:close="{() => showModal = false}">
     <h3 class="recipe-title {isInWebAppiOS ? 'standalone' : ''}">{title}</h3>
     <ul class="ingredients">
-      {#each removedStringArray as {Name, Amount}}
-      <li>
+      {#each removedStringArray as {Name, Amount, Selected}}
+      <li class="{Selected ? 'has-ingridient' : '' }">
         <span>{Name}</span>
         <span>{Amount}</span>
       </li>
@@ -202,6 +202,9 @@
 </main>
 
 <style>
+  .has-ingridient > span {
+    text-decoration: line-through;
+  }
   .instructions-title {
     color: var(--instructions-color);
   }

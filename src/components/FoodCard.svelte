@@ -12,7 +12,7 @@
   let showModal = false;
   let availableIngredients = ingredients.filter((e) => e.Selected);
   let removedStringArray = ingredients.map(function (d) {
-    return { Name: d.Name.replace(/Arla Köket|Arla/g, ""), Amount: d.Amount };
+    return { Name: d.Name.replace(/Arla Köket|Arla/g, ""), Amount: d.Amount, Selected: d.Selected };
   });
 
   const dispatch = createEventDispatcher();
