@@ -3,6 +3,7 @@ import uuid from "uuid/v4";
 
 const ingridients_ = writable([]);
 const mainIngridients_ = writable([]);
+const fetchedRecepies_ = writable([]);
 
 const customIngridients = {
   subscribe: ingridients_.subscribe,
@@ -29,4 +30,9 @@ const customMainIngridients = {
     ),
 };
 
-export { customIngridients, customMainIngridients };
+const fetchedRecepies = {
+  subscribe: fetchedRecepies_.subscribe,
+  setFetchedRecepies: (data) => fetchedRecepies_.set(data),
+};
+
+export { customIngridients, customMainIngridients, fetchedRecepies };

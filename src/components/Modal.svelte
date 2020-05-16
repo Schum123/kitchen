@@ -4,7 +4,9 @@
 
   const dispatch = createEventDispatcher();
   const close = () => dispatch("close");
+  const addToFavorites = () => dispatch("addToFavorites");
   let modal;
+  export let favoriteModal = false;
   const handle_keydown = (e) => {
     if (e.key === "Escape") {
       close();
@@ -36,7 +38,7 @@
 <div class="modal-background" on:click="{close}"></div>
 
 <div
-  class="modal {isInWebAppiOS ? 'standalone' : ''}"
+  class="modal {isInWebAppiOS ? 'standalone' : '', favoriteModal ? 'favorite-modal' : ''}"
   role="dialog"
   aria-modal="true"
   bind:this="{modal}"
@@ -115,6 +117,9 @@
     background: white;
     z-index: 100;
     padding-top: 0;
+  }
+  .favorite-modal {
+    min-height: 500px;
   }
   .modal-inner {
     overflow: scroll;

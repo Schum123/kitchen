@@ -8,11 +8,15 @@
   export let ingredients;
   export let href;
   export let id;
-  let instructions = [];
+  export let instructions;
   let showModal = false;
   let availableIngredients = ingredients.filter((e) => e.Selected);
   let removedStringArray = ingredients.map(function (d) {
-    return { Name: d.Name.replace(/Arla Köket|Arla/g, ""), Amount: d.Amount, Selected: d.Selected };
+    return {
+      Name: d.Name.replace(/Arla Köket|Arla/g, ""),
+      Amount: d.Amount,
+      Selected: d.Selected,
+    };
   });
 
   const dispatch = createEventDispatcher();
@@ -24,6 +28,7 @@
       removedStringArray: removedStringArray,
       href: href,
       title: title,
+      instructions: instructions,
     });
   }
 </script>
@@ -40,9 +45,6 @@
 </article>
 
 <style>
-  .modal {
-  }
-
   .available {
     margin-bottom: 8px;
     text-align: center;
