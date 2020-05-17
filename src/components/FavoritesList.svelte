@@ -119,6 +119,9 @@
     overflow: auto;
     background-color: #fff;
   }
+  h3 {
+    color: var(--instructions-color);
+  }
   ul {
     margin: 0;
     padding: 0;

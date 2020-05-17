@@ -73,18 +73,15 @@
     product.instructions = instructions;
     console.log(product);
     request.onsuccess = function (event) {
-      var products = [
-        { id: 1, name: "Red Men T-Shirt", price: "$3.99" },
-        { id: 2, name: "Pink Women Shorts", price: "$5.99" },
-        { id: 3, name: "Nike white Shoes", price: "$300" },
-      ];
       var db = event.target.result;
 
       var transaction = db.transaction("products", "readwrite");
+      alert(transaction);
 
       // add success event handleer for transaction
       // you should also add onerror, onabort event handlers
       transaction.onsuccess = function (event) {
+        alert("success")
         console.log("[Transaction] ALL DONE!");
       };
       var productsStore = transaction.objectStore("products");
@@ -92,6 +89,7 @@
 
       // products.forEach(function (product) {
       var db_op_req = productsStore.add(product);
+      alert(product);
       db_op_req.onsuccess = function (event) {
         console.log(event.target.result == product.id); // true
       };
@@ -99,6 +97,7 @@
     };
     request.onerror = function (event) {
       console.log("[onerror]", request.error);
+      alert(request.error);
     };
 
     request.onupgradeneeded = function (event) {
